@@ -6,7 +6,7 @@ De forma bem resumida podemos dizer que o Docker é uma plataforma aberta criada
 
 Usando o Docker você pode gerenciar facilmente a infraestrutura da sua aplicação, ou seja, isso agilizará o processo de criação, manutenção e modificação do seu serviço. 
 
-Todo processo é realizado sem a necessidade de qualquer acesso privilegiado a sua infraestrutura corporativa, ou seja, a equipe responsável pela aplicação poderá participar da especificação do ambiente junto com a equipe responsável pelos servidores.
+Todo processo é realizado sem a necessidade de qualquer acesso privilegiado à sua infraestrutura corporativa, ou seja, a equipe responsável pela aplicação poderá participar da especificação do ambiente junto com a equipe responsável pelos servidores.
 
 O Docker viabilizou uma "linguagem" comum entre desenvolvedores e administradores de servidores. Esse novo "idioma" é utilizado para construir arquivos com as definições da infraestrutura necessária, como a aplicação será disposta nesse ambiente, em qual porta fornecerá seu serviço, quais dados de volumes externos serão requisitados e outras possíveis necessidades.
 
