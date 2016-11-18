@@ -12,7 +12,10 @@ Esse livro apresenta a utilização do Docker focando nas melhores práticas de 
 1. [Introdução](manuscript/introducao.md)
 1. [Por que usar Docker?](manuscript/porque.md)
 1. [O que é Docker](manuscript/oquee.md)
-1. [Instalação](manuscript/instalacao.md)
+1. Instalação
+    1. [Instalação no Linux](manuscript/instalacao-linux.md)
+    1. [Instalação no Mac](manuscript/instalacao-mac.md)
+    1. [Instalação no Windows](manuscript/instalacao-windows.md)
 1. [Comandos básicos](manuscript/comandos.md)
 1. [Criando sua própria imagem no Docker](manuscript/criandoimagem.md)
 1. [Entendendo armazenamento no Docker](manuscript/armazenamento.md)
