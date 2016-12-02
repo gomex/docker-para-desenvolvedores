@@ -1,4 +1,4 @@
-# Introdução #
+# Introdução
 
 Essa parte do livro é direcionada a quem não tem conhecimento básico do Docker. Caso você já saiba usar, fique à vontade para pular esta parte. Entretanto, mesmo que você já conheça o Docker, aqui teremos a explicação de muitos recursos disponíveis e de como eles funcionam.
 
