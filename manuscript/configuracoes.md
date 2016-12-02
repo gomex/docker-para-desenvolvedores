@@ -36,7 +36,7 @@ def hello():
    return 'Hello World! %s times.' % redis.get('hits')
 if __name__ == "__main__":
    app.run(host=host_run, debug=debug)
-``` 
+```
 
 Lembrando! Para acessar o código dessa prática basta clonar [esse repositório](https://github.com/gomex/exemplo-12factor-docker) e acessar a pasta **“factor3“**.
 
@@ -81,3 +81,4 @@ Essa boa prática é seguida com ajuda do Docker, pois o código é o mesmo e a 
 
 Se aplicação crescer bastante, as variáveis podem ser carregadas em arquivo e parametrizadas no docker-compose.yml com a opção “env_file”.
 
+[Capítulo anterior: Dependência](dependencia.md) | [Próximo capítulo: Serviços de Apoio](servicosdeapoio.md)

@@ -46,7 +46,7 @@ docker-machine create --driver=<nome do driver>  <nome do ambiente>
 
 Para o driver **virtualbox** temos alguns parâmetros que podem ser utilizadas:
 
-|Parâmetro   | Explicação | 
+|Parâmetro   | Explicação |
 |-----------|------------|
 |--virtualbox-memory  | Especifica a quantidade de memória RAM que esse ambiente poderá utilizar. O valor padrão é 1024MB. (Sempre em MB) |
 |--virtualbox-cpu-count | Especifica a quantidade de núcleos de CPU que esse ambiente poderá utilizar. O valor padrão é 1 |
@@ -178,7 +178,4 @@ docker-machine rm teste-aws
 ```
 Após removido localmente, ele automaticamente removerá a instância EC2 que foi provisionada na AWS.
 
-
-
-
-
+[Capítulo anterior: Entendendo a rede no Docker](rede.md) | [Próximo capítulo: Gerenciando múltiplos containers Docker com Docker Compose](compose.md)

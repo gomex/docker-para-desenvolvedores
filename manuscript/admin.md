@@ -27,7 +27,7 @@ redis.set('hits', 0)
 Ele é responsável por reinicializar o contador de visitas do Redis. Esse comando será dado usando um contêiner diferente a partir da mesma imagem docker. Primeiro vamos iniciar o ambiente. Baixe o repositório e acesse a pasta factor12 e execute o comando abaixo:
 
 ```
-docker-compose up 
+docker-compose up
 ```
 
 Acesse a aplicação em seu navegador. Caso esteja usando GNU/Linux ou Docker For MAC e Windows acesse o endereço 127.0.0.1. Você verá a seguinte frase:
@@ -48,3 +48,4 @@ O comando **“python reset.py”** será executado dentro de um novo contêiner
 
 Acesse novamente a aplicação e verifique se o marcador iniciou a partir de 1 novamente.
 
+[Capítulo anterior: Logs](logs.md) | [Próximo capítulo: Dicas](dicas.md)

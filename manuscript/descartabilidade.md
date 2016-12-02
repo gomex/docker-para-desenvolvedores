@@ -41,7 +41,7 @@ if __name__ == "__main__":
         print 'Signal handler called with signal', signum
         server.terminate()
         server.join()
-    
+
     signal.signal(signal.SIGTERM, server_handler)
 
     def run_server():
@@ -88,3 +88,5 @@ time docker-compose stop
 ```
 
 Veja que o processo worker foi finalizar bem mais rápido, pois recebeu o sinal SIGTERM e a aplicação fez seu serviço de auto finalização e não precisou receber um sinal SIGKILL para ser de fato finalizado.
+
+[Capítulo anterior: Concorrência](concorrencia.md) | [Próximo capítulo: Paridade entre desenvolvimento/produção](paridade.md)

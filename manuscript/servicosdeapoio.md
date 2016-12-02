@@ -63,3 +63,4 @@ Fique atento para armazenamento de segredos dentro do docker-compose.yml, pois e
 
 Uma estratégia possível é a manutenção de variáveis de ambiente no docker host e dessa forma você precisaria usar variáveis do tipo **${variavel}** dentro do docker-compose.yml pra pode repassar essa configuração ou utilizar outro recurso mais avançado de gerenciamento de segredos.
 
+[Capítulo anterior: Configurações](configuracoes.md) | [Próximo capítulo: Construa, lance, execute](construa-lance-execute.md)

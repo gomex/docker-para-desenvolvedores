@@ -25,7 +25,7 @@ Caso deseje inspecionar a imagem que acabou de atualizar, basta utilizar o coman
 ```
 docker inspect python
 ```
-O comando [inspect](https://docs.docker.com/engine/reference/commandline/inspect/) é responsável por informar todos os dados referentes a essa imagem. 
+O comando [inspect](https://docs.docker.com/engine/reference/commandline/inspect/) é responsável por informar todos os dados referentes a essa imagem.
 
 Agora que temos a imagem atualizada e inspecionada, podemos iniciar o container, mas antes de simplesmente copiarmos e colarmos o comando, vamos entender como ele realmente funciona.
 
@@ -92,7 +92,7 @@ docker run -it --rm -m 512M python
 
 Com o comando acima estamos limitando esse container a utilizar somente 512 MB de RAM.
 
-Para balancear o uso da CPU pelos containers, utilizamos especificação de pesos para cada container, quanto menor o peso, menor sua prioridade no uso. Os pesos podem oscilar de **1** a **1024**. 
+Para balancear o uso da CPU pelos containers, utilizamos especificação de pesos para cada container, quanto menor o peso, menor sua prioridade no uso. Os pesos podem oscilar de **1** a **1024**.
 
 Caso não seja especificado o peso do container, ele usará o maior peso possível, que nesse caso é o **1024**.
 
@@ -119,7 +119,7 @@ docker ps <parâmetros>
 
 Os parâmetros mais utilizados na execução do container são:
 
-|Parâmetro   | Explicação|  
+|Parâmetro   | Explicação|
 |-----------|------------|
 |-a | Lista todos os containers, inclusive os desligados|
 |-l | Lista os ultimos containers, inclusive os desligados|
@@ -149,7 +149,4 @@ docker start meu_python
 > Vale ressaltar que a ideia dos containers é serem descartáveis, ou seja, caso você esteja usando o **mesmo** container por muito tempo sem descartá-lo, você provavelmente estará usando o Docker incorretamente.
 > O Docker **não** é uma máquina, é um processo em execução e como todo processo ele deve ser descartado para que outro possa tomar seu lugar na reinicialização do mesmo.
 
-
-
-
-
+[Capítulo anterior: Instalação](instalacao.md) | [Próximo capítulo: Criando sua própria imagem no Docker](criandoimagem.md)

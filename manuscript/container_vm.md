@@ -61,3 +61,5 @@ No segundo nível de isolamento, temos o Docker baixando as imagens prontas e pr
 Caso esses containers sejam replicados entre as máquinas virtuais, seria possível prover alta disponibilidade sem grandes custos, ou seja, usando um balanceador externo e viabilizando o cluster dos dados persistidos pelos bancos de dados.
 
 Toda essa facilidade com poucos comandos, recursos e conhecimento. Basta um pouco de tempo para mudar o paradigma de gerência dos ativos e paciência para lidar com os novos problemas inerentes do modelo.
+
+[Capítulo anterior: Apêndice](apendice.md)
