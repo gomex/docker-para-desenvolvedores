@@ -38,3 +38,5 @@ Essa porta 5000 pode ser utilizada para servir dados localmente em um ambiente d
 Utilizando esse modelo de vinculação de portas torna o processo de atualização de aplicação mais fluído, uma vez que na utilização de um proxy reverso inteligente, é possível adicionar novos nós gradativamente, com a nova versão, e remover os antigos a medida que as versões atualizadas estão sendo executadas em paralelo.
 
 Convém salientar que mesmo que o Docker permita a utilização de mais do que uma porta por contêineres, essa boa prática é enfática ao afirmar que você só deve utilizar uma porta vinculada por aplicação.
+
+[Capítulo anterior: Processos](processos.md) | [Próximo capítulo: Concorrência](concorrencia.md)

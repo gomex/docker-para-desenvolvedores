@@ -50,3 +50,5 @@ Para acessar o código descrito aqui, baixe o [repositório](https://github.com/
 Um outro resultado positivo do uso dessa boa prática é a simplificação da utilização do código por outro desenvolvedor. Um novo programador pode verificar nos arquivos de dependências quais os pré-requisitos para sua aplicação executar, assim como executar facilmente o ambiente sem a necessidade de seguir uma extensa documentação que raramente é atualizada.
 
 Usando o Docker é possível configurar automaticamente o necessário para rodar o código da aplicação, seguindo com isso essa boa prática perfeitamente.
+
+[Capítulo anterior: Base de código](basecode.md) | [Próximo capítulo: Configurações](configuracoes.md)

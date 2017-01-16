@@ -4,7 +4,7 @@ De forma bem resumida podemos dizer que o Docker é uma plataforma aberta criada
 
 ![](images/docker.jpg)
 
-Usando o Docker você pode gerenciar facilmente a infraestrutura da sua aplicação, ou seja, isso agilizará o processo de criação, manutenção e modificação do seu serviço. 
+Usando o Docker você pode gerenciar facilmente a infraestrutura da sua aplicação, ou seja, isso agilizará o processo de criação, manutenção e modificação do seu serviço.
 
 Todo processo é realizado sem a necessidade de qualquer acesso privilegiado à sua infraestrutura corporativa, ou seja, a equipe responsável pela aplicação poderá participar da especificação do ambiente junto com a equipe responsável pelos servidores.
 
@@ -26,4 +26,6 @@ O modelo de isolamento utilizado no Docker é a virtualização a nível do sist
 
 Para criar o isolamento necessário desse processo, o Docker usa a funcionalidade do kernel denominada de [namespaces](http://man7.org/linux/man-pages/man7/namespaces.7.html), que cria ambientes isolados entre containers, ou seja, os processos de uma aplicação em execução não terão acesso aos recursos de outra, a não ser que isso seja expressamente liberado na configuração de cada ambiente.
 
-Para evitar a exaustão dos recursos da máquina por apenas um ambiente isolado, o Docker usa a funcionalidade [cgroups](https://en.wikipedia.org/wiki/Cgroups) do kernel, que é responsável por criar limites de uso do hardware a disposição. Com isso é possível coexistir no mesmo host diferentes containers, sem que um afete diretamente o outro por uso exagerado dos recursos compartilhados. 
+Para evitar a exaustão dos recursos da máquina por apenas um ambiente isolado, o Docker usa a funcionalidade [cgroups](https://en.wikipedia.org/wiki/Cgroups) do kernel, que é responsável por criar limites de uso do hardware a disposição. Com isso é possível coexistir no mesmo host diferentes containers, sem que um afete diretamente o outro por uso exagerado dos recursos compartilhados.
+
+[Capítulo anterior: Por que usar Docker](porque.md) | [Próximo capítulo: Instalação](instalacao.md)

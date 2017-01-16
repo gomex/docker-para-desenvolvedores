@@ -17,3 +17,5 @@ O 12factor pretende colaborar com base em suas boas práticas reduzir esse abism
  * **Ferramentas**: mantenha desenvolvimento e produção o mais similares possível.
 
 A solução de contêiner tem como um dos principais objetivos colaborar com essa portabilidade entre ambiente de desenvolvimento e produção, pois a ideia é que a imagem seja construída e apenas o seu status modifique para que ela seja posta em produção. O nosso código atual já está pronto para esse tipo de comportamento, sendo assim não há muito o que precise ser modificado para garantir essa boa prática, que será como um bônus pela adoção do Docker e o seguimento das outras boas práticas do 12factor.
+
+[Capítulo anterior: Descartabilidade](descartabilidade.md) | [Próximo capítulo: Logs](logs.md)

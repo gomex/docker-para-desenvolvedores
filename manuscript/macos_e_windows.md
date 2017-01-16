@@ -154,3 +154,5 @@ docker-machine ssh default
 **Tudo pode ser feito automaticamente? Claro que sim!**
 
 Agora que você já sabe como fazer tudo manualmente, se precisar instalar o docker toolbox em uma máquina nova e não lembrar quais comandos precisa executar para criar uma máquina nova ou simplesmente aprontar seu ambiente para uso, basta executar o programa “Docker quickstart terminal” e ele fará todo trabalho automaticamente pra ti, ou seja, caso não exista nenhuma máquina criada, ele criará uma chamada “default”, caso a máquina já tenha sido criada, ele automaticamente configura suas variáveis de ambiente e lhe deixar apto pra utilizar o docker host remoto apartir de seus aplicativos de controle (docker e docker-compose).
+
+[Capítulo anterior: Gerenciando múltiplos containers Docker com Docker Compose](compose.md) | [Próximo capítulo: Transformando sua aplicação em container](dockerizarando_app_todo.md)

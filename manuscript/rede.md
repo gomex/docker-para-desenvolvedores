@@ -73,7 +73,7 @@ Cada rede criada por usuário deve estar associado a um determinado driver, e ca
 
 #### Bridge
 
-Essa é o driver de rede mais simples de utilizar, pois não demanda muita configuração. A rede criada por usuário utilizando o driver bridge se assemelha bastante a rede padrão do docker com o nome “bridge”. 
+Essa é o driver de rede mais simples de utilizar, pois não demanda muita configuração. A rede criada por usuário utilizando o driver bridge se assemelha bastante a rede padrão do docker com o nome “bridge”.
 
 > Novamente um ponto que merece atenção. O docker tem uma rede padrão chamada “bridge” que utiliza um driver também chamado de “bridge“. Talvez por conta disso a confusão só aumente, mas é importante deixar claro que são coisas distintas.
 
@@ -138,3 +138,5 @@ Esse assunto merece um artigo inteiro pra isso, sendo assim, no momento, vou ape
 Podemos perceber que a utilização de redes definidas por usuário torna obsoleta a utilização da opção “–link”, assim como viabiliza um novo serviço de DNS interno do docker, que facilita a vida de quem se propõe a manter uma infraestrutura docker grande e complexa, assim como viabilizar o isolamento de rede dos seus serviços.
 
 Conhecer e utilizar bem as tecnologias novas é uma boa prática, que evita problemas futuros e facilita a construção e manutenção de projetos grandes e complexos.
+
+[Capítulo anterior: Entendendo armazenamento no Docker](armazenamento.md) | [Próximo capítulo: Utilizando Docker em múltiplos ambiente](machine.md)

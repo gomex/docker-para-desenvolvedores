@@ -28,3 +28,5 @@ mais prática.
 
 Nesse livro ainda temos alguns apêndices que trarão assuntos extras que são
 importantes, mas não couberam nos outros capítulos.
+
+[Próximo capítulo: Propósito desse livro](proposito.md)

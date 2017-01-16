@@ -2,7 +2,7 @@
 
 Se você leu a primeira parte desse livro já sabe o básico de Docker, mas agora que pretende começar a usar com mais frequência alguns desconfortos podem surgir, pois como qualquer ferramenta, Docker tem seu próprio conjunto de boas práticas e dicas para ser efetivo.
 
-O objetivo dessse texto é demonstrar algumas dicas para o bom uso do Docker. Isso não quer dizer que a forma que você executa hoje seja necessariamente errada. 
+O objetivo dessse texto é demonstrar algumas dicas para o bom uso do Docker. Isso não quer dizer que a forma que você executa hoje seja necessariamente errada.
 
 Toda ferramenta demanda de algumas melhores práticas para tornar o seu uso mais efetivo e com menor possibilidade de problemas futuros.
 
@@ -14,7 +14,7 @@ Lembre-se que cada comando `docker run` cria um novo container com base em uma i
 
 ### Containers descartáveis
 
-É esperado que os containers executados possam ser descartados sem qualquer problema, sendo assim é importante utilizar containers verdadeiramente efêmeros. 
+É esperado que os containers executados possam ser descartados sem qualquer problema, sendo assim é importante utilizar containers verdadeiramente efêmeros.
 
 Para tal utilize o argumento `--rm`. Isso faz com que todos o container, e todos seus dados, sejam removidos após o termino da execução, evitando consumir disco de maneira desnecessária.
 
@@ -87,13 +87,13 @@ Mais informação também pode ser encontrada [nessa resposta](http://stackoverf
 Outras fontes são:
 
  * Documentação oficial do Docker sobre [Backup, restauração ou migração de dados (em inglês)](https://docs.docker.com/engine/userguide/containers/dockervolumes/#backup-restore-or-migrate-data-volumes)
- 
+
  * Uma ferramenta de backup (atualmente deprecada): [docker-infra/docker-backup](https://github.com/docker-infra/docker-backup)
 
 
 ### Use docker exec para "entrar num container"
 
-Eventualmente é necessário entrar em um container em execução afim de verificar algum problema, efetuar testes ou simplemente depurar (*debug*). 
+Eventualmente é necessário entrar em um container em execução afim de verificar algum problema, efetuar testes ou simplemente depurar (*debug*).
 Nunca instale o daemon SSH em um container docker. Use `docker exec` para entrar em um container e rodar um comando:
 
 ```sh
@@ -239,7 +239,7 @@ Na maioria dos casos, rode apenas um único processo por container. Desacoplando
 ### Prefira COPY ao invés de ADD
 
 
-O comando `ADD` existe desde o início do Docker. É muito versátil e permite alguns truques além de simplesmente copiar arquivos do contexto de contrução, o que o torna muito mágico e difícil de entender. 
+O comando `ADD` existe desde o início do Docker. É muito versátil e permite alguns truques além de simplesmente copiar arquivos do contexto de contrução, o que o torna muito mágico e difícil de entender.
 Ele permite baixar arquivos de urls e automaticamente extrair arquivos de formatos conhecidos (tar, gzip, bzip2, etc.).
 
 Por outro lado, `COPY` é um comando muito mais simples para inserir arquivos e pastas do caminho de construção para dentro da imagem Docker. Assim, favoreça `COPY` a menos que tenha certeza absoluta que `ADD` é necessário. Para mais detalhes veja [aqui](https://labs.ctl.io/dockerfile-add-vs-copy/).
@@ -378,3 +378,5 @@ EXPOSE 80:8080
 # apenas privado
 EXPOSE 80
 ```
+
+[Capítulo anterior: Processos de administração](admin.md) | [Próximo capítulo: Apêndice](apendice.md)

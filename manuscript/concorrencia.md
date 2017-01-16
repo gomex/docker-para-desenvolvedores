@@ -163,5 +163,4 @@ Nessa nova proposta de ambiente, o serviço **web** se encarregará de receber t
 
 Aproveito para dar os créditos ao capitão [Marcosnils](https://twitter.com/marcosnils), que foi a pessoa que me mostrou que é possível balancear carga pelo nome da rede docker.
 
-
-
+[Capítulo anterior: Vínculo de portas](vinculos.md) | [Próximo capítulo: Descartabilidade](descartabilidade.md)
