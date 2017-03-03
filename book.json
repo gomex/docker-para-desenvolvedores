@@ -32,7 +32,7 @@
             "useIdentifier": true
         },
         "ga": {
-            "token": "UA-21710445-1",
+            "token": "",
             "configuration": "auto"
         }
     }
