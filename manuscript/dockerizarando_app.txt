@@ -1,0 +1,34 @@
+# Dockerizando aplicações 
+
+Estamos evoluindo continuamente para entregar aplicações cada vez melhores, em menor tempo, replicáveis e escaláveis. Porém os esforços e aprendizados para atingir esse nível de maturidade muitas vezes não são simples de se alcançar.
+
+Atualmente notamos o surgimento de várias opções de plataformas para facilitar a implantação, configuração e escalabilidade das aplicações que desenvolvemos. Porém, para aumentar nosso grau de maturidade não podemos apenas depender da plataforma, precisamos construir nossa aplicação seguindo boas práticas.
+
+Visando definir uma série de boas práticas comuns a aplicações web modernas, alguns desenvolvedores do [Heroku](https://www.heroku.com/) escreveram o manifesto [12Factor app](http://12factor.net/pt_br/), baseado em uma larga experiência em desenvolvimento de aplicações web.
+
+![](images/12factor.gif)
+
+"The Twelve-Factor app" (12factor) é um manifesto com uma série de boas práticas para construção de software utilizando formatos declarativos de automação, maximizando portabilidade e minimizando divergências entre ambientes de execução, permitindo a implantação em plataformas de nuvem modernas e facilitando a escalabilidade. Assim, aplicações são construídas sem manter estado (stateless) e conectadas a qualquer combinação de serviços de infraestrutura para retenção de dados (Banco de dados, fila, memória cache e afins).
+
+Nesse capítulo falaremos sobre criação de aplicações como imagens docker com base no 12factor app, ou seja, a ideia é demonstrar as melhores práticas de como se realizar a criação de uma infraestrutura para suportar, empacotar e disponibilizar a sua aplicação com alto nível de maturidade e agilidade.
+
+O uso das práticas do 12factor encaixa muito bem com Docker, pois muitos dos recursos do Docker são melhores aproveitados caso sua aplicação tenha siga essas práticas. Dessa forma, daremos uma ideia de como aproveitar a plataforma de Docker e as práticas do 12factor para facilitiar a portalibilidade e escalabilidade da sua aplicação web.
+
+Como exemplo, usaremos uma aplicação simples em Pyhton, descrita abaixo:
+
+```
+from flask import Flask
+from redis import Redis
+app = Flask(__name__)
+redis = Redis(host='redis', port=6379)
+@app.route('/')
+def hello():
+   redis.incr('hits')
+   return 'Hello World! %s times.' % redis.get('hits')
+if __name__ == "__main__":
+   app.run(host="0.0.0.0", debug=True)
+```
+
+Como podemos notar, essa aplicação é apenas um serviço HTTP que conta e exibe quantas vezes foi acessada. Essa informação é armazenada através de um contador numa instância do sistema de armazenamento Redis.
+
+Agora vamos às boas práticas!

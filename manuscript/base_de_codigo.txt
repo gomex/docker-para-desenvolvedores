@@ -1,0 +1,49 @@
+# Base de código
+
+Com o objetivo de evitar a pulverização e baixa rastreabilidade das mudanças de código, essa boa prática indica que cada aplicação deve ter apenas uma base de código e a partir do mesmo código uma aplicação pode ser implantada em distintos ambientes, mas a base precisa ser a mesma. Vale salientar que essa boa prática é necessária caso pretenda praticar o [Continuous Integration (CI)](https://www.thoughtworks.com/continuous-integration).
+
+Para essa explicação, criei um [repositório](https://github.com/gomex/exemplo-12factor-docker.git
+) de exemplo.
+
+Perceba que todo nosso código está dentro desse repositório, organizado por prática em cada pasta, para facilitar a reprodução. Lembre de entrar na pasta correspondente a cada boa prática apresentada.
+
+O Docker tem uma infraestrutura que permite a criação de variável para que o mesmo código tenha comportamento distinto com base no parâmetro de infraestrutura recebido.
+
+![](images/codebase-deploys.png)
+
+Para configurar o ambiente de desenvolvimento para o exemplo apresentado temos esse arquivo docker-compose.yml:
+
+```
+web:
+  build: .
+  ports:
+   - "5000:5000"
+  volumes:
+   - .:/code
+  links:
+   - redis
+  labels:
+   - 'app.environment=${ENV_APP}'
+redis:
+  image: redis
+  volumes:
+   - dados_${ENV_APP}:/data
+  labels:
+   - 'app.environment=${ENV_APP}'
+```
+O serviço web será gerado a partir da construção de uma imagem Docker através do seguinte Dockerfile:
+
+```
+FROM python:2.7
+ADD . /code
+WORKDIR /code
+RUN pip install -r requirements.txt
+CMD python app.py
+```
+Com posse de todos os arquivos na mesma pasta, iniciaremos o ambiente com o seguinte comando:
+
+```
+export ENV_APP=devel ; docker-compose -p $ENV_APP up -d
+```
+
+Dependendo do valor da variável ENV_APP teremos o serviço rodando com uma configuração diferente, porém sempre a partir do mesmo código, ou seja, seguindo perfeitamente a ideia dessa primeira boa prática.

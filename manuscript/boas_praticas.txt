@@ -1,0 +1,31 @@
+# Dicas para uso do Docker
+
+Esse capítulo tem como objetivo oferecer algumas dicas curtas e diretas com relação as melhores práticas de utilização do Docker.
+
+## Boas práticas para criar imagens
+
+**Breve**
+
+## Boas práticas para executar containers
+
+**Breve**
+
+## Segurança de docker engine
+
+**Breve**
+
+## Segurança em containers
+
+**Breve**
+
+## Gerenciamento de logs
+
+**Breve**
+
+## Questões de performance
+
+**Breve**
+
+## Monitoramento de containers
+
+**Breve**
