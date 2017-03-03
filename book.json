@@ -1,0 +1,39 @@
+{
+    "title": "Docker para Desenvolvedores",
+    "language": "pt",
+    "author": "Rafael Gomes",
+    "root": "manuscript",
+    "structure": {
+        "readme": "README.md" ,
+        "glossary": "glossario.md",
+        "summary": "summary.md"
+    },
+    "plugins": [
+        "code-highlighter",
+        "code-editor",
+        "disqus",
+        "exercises",
+        "zingchart",
+        "quiz",
+        "quizzes",
+        "codepen",
+        "jsfiddle",
+        "gist",
+        "ace",
+        "chart",
+        "codesnippet",
+        "include-codeblock",
+        "ga",
+        "wabtheme"
+    ],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "eloquente-js",
+            "useIdentifier": true
+        },
+        "ga": {
+            "token": "UA-21710445-1",
+            "configuration": "auto"
+        }
+    }
+}
