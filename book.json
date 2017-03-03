@@ -28,7 +28,7 @@
     ],
     "pluginsConfig": {
         "disqus": {
-            "shortName": "eloquente-js",
+            "shortName": "dockerparadesenvolvedores",
             "useIdentifier": true
         },
         "ga": {
