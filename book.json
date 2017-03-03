@@ -5,15 +5,13 @@
     "structure": {
         "readme": "README.md" ,
         "glossary": "glossario.md",
-        "summary": "summary.md"
+        "summary": "sumario.md"
     },
     "plugins": [
         "code-highlighter",
         "code-editor",
         "disqus",
         "zingchart",
-        "quiz",
-        "quizzes",
         "codepen",
         "jsfiddle",
         "gist",
