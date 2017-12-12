@@ -130,7 +130,7 @@ Os parâmetros mais utilizados na execução do container são:
 
 Uma vez iniciado o container a partir de uma imagem é possível gerenciar a utilização com novos comandos.
 
-Caso deseje desligar o container basta utilizar o comando [docker stop](https://docs.docker.com/engine/reference/commandline/stop/). Ele recebe como argumento o **ID** ou **nome** do container. Ambos os dados podem ser obtidos com o **docker ps**, explicado no tópico anterior.
+Caso deseje desligar o container basta utilizar o comando [docker stop](https://docs.docker.com/engine/reference/commandline/stop/). Ele recebe como argumento o **ID** ou **nome** do container. Ambos os dados podem ser obtidos com o **docker ls**, explicado no tópico anterior.
 
 Um exemplo de uso:
 
