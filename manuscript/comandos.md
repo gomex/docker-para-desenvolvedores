@@ -117,7 +117,7 @@ Esse comando é responsável por mostrar todos os containers, mesmo aqueles não
 docker container ls <parâmetros>
 ```
 
-Os parâmetros mais utilizados na execução do container são:
+Os parâmetros mais utilizados na execução desse comando são:
 
 |Parâmetro   | Explicação|  
 |-----------|------------|
