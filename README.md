@@ -6,7 +6,7 @@ Esse livro apresenta a utilização do Docker focando nas melhores práticas de 
 
 ## Sumário
 
-1. [Organização](manuscript/organizacao.md)
+1. [Como ler esse livro](manuscript/organizacao.md)
 1. [Propósito desse livro](manuscript/proposito.md)
 1. [Agradecimentos](manuscript/agradecimentos.md)
 1. [Introdução](manuscript/introducao.md)
