@@ -20,3 +20,5 @@ Seguem alguns comandos úteis e simples abaixo:
 `docker save -o imagem.docker imagem`
 -   Carregar imagem  
 `docker load -i imagem.docker`
+-   Remove todos os containers
+`docker rm $(docker ps -qa)`
