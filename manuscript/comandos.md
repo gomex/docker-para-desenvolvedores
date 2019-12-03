@@ -1,18 +1,18 @@
 # Comandos básicos
 
-Para utilização do Docker é necessário conhecer alguns comandos e entender de forma clara e direta para que servem, assim como alguns exemplos de uso.
+Para utilização do Docker, é-se necessário conhecer alguns comandos e entender de forma clara e direta para que servem, assim como alguns exemplos de uso.
 
-Não abordaremos os comandos de criação de imagem e tratamento de problemas (troubleshooting) no Docker, pois têm capítulos específicos para o detalhamento.
+Não abordaremos os comandos de criação de imagem e nem tratamento de problemas (troubleshooting) no Docker, pois têm capítulos específicos para o detalhamento.
 
 ## Executando um container
 
-Para iniciar um container é necessário saber a partir de qual imagem será executado. Para listar as imagens que seu **Docker host** tem localmente, execute o comando abaixo:
+Para iniciar um container, é necessário saber a partir de qual imagem será executado. Para listar as imagens que seu **Docker host** tem localmente, execute o comando abaixo:
 
 ```
 docker image list
 ```
 
-As imagens retornadas estão presentes no seu **Docker host** e não demandam qualquer download da [nuvem pública do Docker](https://hub.docker.com), a menos que deseje atualizá-la. Para atualizar a imagem basta executar o comando abaixo:
+As imagens retornadas estão presentes no seu **Docker host** e não demandam qualquer download da [nuvem pública do Docker](https://hub.docker.com), a menos que deseje atualizá-la. Para atualizar a imagem, basta executar o comando abaixo:
 
 ```
 docker image pull python
@@ -52,13 +52,13 @@ Segue um exemplo simples no seguinte comando:
 ```
 docker container run -it --rm --name meu_python python bash
 ```
-De acordo com o comando acima, será iniciado um container com o nome **meu_python**, criado a partir da imagem **python** e o processo executado nesse container será o **bash**.
+De acordo com o comando acima, será iniciado um container com o nome **meu_python** criado a partir da imagem **python** e o processo executado nesse container será o **bash**.
 
-Vale lembrar que, caso o **CMD** não seja especificado no comando **docker container run**, é utilizado o valor padrão definido no **Dockerfile** da imagem utilizada. No nosso caso é **python** e seu comando padrão executa o binário **python**, ou seja, se não fosse especificado o **bash**, no final do comando de exemplo acima, ao invés de um shell bash do GNU/Linux, seria exibido um shell do **python**.
+Vale lembrar que caso o **CMD** não seja especificado no comando **docker container run**, é utilizado o valor padrão definido no **Dockerfile** da imagem utilizada. No nosso caso é **python** e seu comando padrão executa o binário **python**, ou seja, se não fosse especificado o **bash**, no final do comando de exemplo acima, ao invés de um shell bash do GNU/Linux, seria exibido um shell do **python**.
 
 ### Mapeamento de volumes
 
-Para realizar mapeamento de volume basta especificar qual origem do dado no host e onde deve ser montado dentro do container.
+Para realizar mapeamento de volume, basta especificar qual origem do dado no host e onde deve ser montado dentro do container.
 
 ```
 docker container run -it --rm -v "<host>:<container>" python
@@ -67,7 +67,7 @@ O uso de armazenamento é melhor explicado em capítulos futuros, por isso não 
 
 ### Mapeamento de portas
 
-Para realizar o mapeamento de portas basta saber qual porta será mapeada no host e qual deve receber essa conexão dentro do container.
+Para realizar o mapeamento de portas, basta saber qual porta que será mapeada no host e qual deve receber essa conexão dentro do container.
 
 ```
 docker container run -it --rm -p "<host>:<container>" python
@@ -78,11 +78,11 @@ Um exemplo com a porta 80 do host para uma porta 8080 dentro do container tem o 
 docker container run -it --rm -p 80:8080 python
 ```
 
-Com o comando acima temos a porta **80** acessível no **Docker host** que repassa todas as conexões para a porta **8080** dentro do **container**. Ou seja, não é possível acessar a porta **8080** no endereço IP do **Docker host**, pois essa porta está acessível apenas dentro do **container** que é isolada a nível de rede, como já dito anteriormente.
+Com o comando acima, temos a porta **80** acessível no **Docker host** que repassa todas as conexões para a porta **8080** dentro do **container**. Ou seja, não é possível acessar a porta **8080** no endereço IP do **Docker host**, pois essa porta está acessível apenas dentro do **container** que é isolada a nível de rede, como já dito anteriormente.
 
 ### Gerenciamento dos recursos
 
-Na inicialização dos containers é possível especificar alguns limites de utilização dos recursos. Trataremos aqui apenas de memória RAM e CPU, os mais utilizados.
+Na inicialização dos containers, é possível especificar alguns limites de utilização dos recursos. Trataremos aqui apenas de memória RAM e CPU, os mais utilizados.
 
 Para limitar o uso de memória RAM que pode ser utilizada por esse container, basta executar o comando abaixo:
 
@@ -128,7 +128,7 @@ Os parâmetros mais utilizados na execução do container são:
 
 ## Gerenciamento de containers
 
-Uma vez iniciado o container a partir de uma imagem é possível gerenciar a utilização com novos comandos.
+Uma vez iniciado o container a partir de uma imagem, é possível gerenciar a utilização com novos comandos.
 
 Caso deseje desligar o container basta utilizar o comando [docker stop](https://docs.docker.com/engine/reference/commandline/stop/). Ele recebe como argumento o **ID** ou **nome** do container. Ambos os dados podem ser obtidos com o **docker ps**, explicado no tópico anterior.
 
