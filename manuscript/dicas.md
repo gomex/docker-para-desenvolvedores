@@ -88,8 +88,6 @@ Outras fontes são:
 
  * Documentação oficial do Docker sobre [Backup, restauração ou migração de dados (em inglês)](https://docs.docker.com/engine/userguide/containers/dockervolumes/#backup-restore-or-migrate-data-volumes)
 
- * Uma ferramenta de backup (atualmente deprecada): [docker-infra/docker-backup](https://github.com/docker-infra/docker-backup)
-
 
 ### Use docker container exec para "entrar em um contêiner"
 
