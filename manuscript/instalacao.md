@@ -60,8 +60,8 @@ pip install docker-compose
 
 #### Tratamento de possíveis problemas
 
-Caso não tenha instalado o comando **pip** em seu computador, normalmente ele pode ser instalado usando
-seu sistema de gerenciamento de pacote com o nome **python-pip** ou semelhante.
+Caso não tenha instalado o comando `pip` em seu computador, normalmente ele pode ser instalado usando
+seu sistema de gerenciamento de pacote com o nome `python-pip` ou semelhante.
 
 ### Docker machine no GNU/Linux
 

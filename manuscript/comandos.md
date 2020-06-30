@@ -18,7 +18,7 @@ As imagens retornadas estão presentes no seu **Docker host** e não demandam qu
 docker image pull python
 ```
 
-Usamos a imagem chamada **python** como exemplo, mas caso deseje atualizar qualquer outra imagem, basta colocar seu nome no lugar de **python**.
+Usamos a imagem chamada `python` como exemplo, mas caso deseje atualizar qualquer outra imagem, basta colocar seu nome no lugar de `python`.
 
 Caso deseje inspecionar a imagem que acabou de atualizar, basta usar o comando abaixo:
 
@@ -52,9 +52,9 @@ Segue um exemplo simples no seguinte comando:
 ```
 docker container run -it --rm --name meu_python python bash
 ```
-De acordo com o comando acima, será iniciado um container com o nome **meu_python**, criado a partir da imagem **python** e o processo executado nesse container será o **bash**.
+De acordo com o comando acima, será iniciado um container com o nome `meu_python`, criado a partir da imagem `python` e o processo executado nesse container será o `bash`.
 
-Vale lembrar que, caso o **CMD** não seja especificado no comando **docker container run**, é utilizado o valor padrão definido no **Dockerfile** da imagem utilizada. No nosso caso é **python** e seu comando padrão executa o binário **python**, ou seja, se não fosse especificado o **bash**, no final do comando de exemplo acima, ao invés de um shell bash do GNU/Linux, seria exibido um shell do **python**.
+Vale lembrar que, caso o `CMD` não seja especificado no comando `docker container run`, é utilizado o valor padrão definido no `Dockerfile` da imagem utilizada. No nosso caso é `python` e seu comando padrão executa o binário `python`, ou seja, se não fosse especificado o `bash`, no final do comando de exemplo acima, ao invés de um shell bash do GNU/Linux, seria exibido um shell do `python`.
 
 ### Mapeamento de volumes
 
@@ -117,7 +117,7 @@ Esse comando é responsável por mostrar todos os containers, mesmo aqueles não
 docker container ls <parâmetros>
 ```
 
-Os parâmetros mais utilizados na execução do container são:
+Os parâmetros mais utilizados na execução desse comando são:
 
 |Parâmetro   | Explicação|  
 |-----------|------------|
@@ -130,7 +130,7 @@ Os parâmetros mais utilizados na execução do container são:
 
 Uma vez iniciado o container a partir de uma imagem é possível gerenciar a utilização com novos comandos.
 
-Caso deseje desligar o container basta utilizar o comando [docker stop](https://docs.docker.com/engine/reference/commandline/stop/). Ele recebe como argumento o **ID** ou **nome** do container. Ambos os dados podem ser obtidos com o **docker ps**, explicado no tópico anterior.
+Caso deseje desligar o container basta utilizar o comando [docker stop](https://docs.docker.com/engine/reference/commandline/stop/). Ele recebe como argumento o **ID** ou **nome** do container. Ambos os dados podem ser obtidos com o `docker ps`, explicado no tópico anterior.
 
 Um exemplo de uso:
 
@@ -138,7 +138,7 @@ Um exemplo de uso:
 docker container stop meu_python
 ```
 
-No comando acima, caso houvesse um container chamado **meu_python** em execução, ele receberia um sinal **SIGTERM** e, caso não fosse desligado, receberia um **SIGKILL** depois de 10 segundos.
+No comando acima, caso houvesse um container chamado `meu_python` em execução, ele receberia um sinal `SIGTERM` e, caso não fosse desligado, receberia um `SIGKILL` depois de 10 segundos.
 
 Caso deseje reiniciar o container que foi desligado e não iniciar um novo, basta executar o comando [docker start](https://docs.docker.com/engine/reference/commandline/start/):
 
