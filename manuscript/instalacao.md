@@ -4,8 +4,8 @@ O Docker deixou de ser apenas um software para virar um conjunto deles: um ecoss
 
 Nesse ecossistema temos os seguintes softwares:
 
-* **Docker Engine:** É o software base de toda solução. É tanto o daemon responsável pelos containers como o cliente usado para enviar comandos para o daemon.
-* **Docker Compose:** É a ferramenta responsável pela definição e execução de múltiplos containers com base em arquivo de definição.
+* **Docker Engine:** É o software base de toda solução. É tanto o daemon responsável pelos contêineres como o cliente usado para enviar comandos para o daemon.
+* **Docker Compose:** É a ferramenta responsável pela definição e execução de múltiplos contêineres com base em arquivo de definição.
 * **Docker Machine:** é a ferramenta que possibilita criar e manter ambientes docker em máquinas virtuais, ambientes de nuvem e até mesmo em máquina física.
 
 Não citamos o [Swarm](https://docs.docker.com/swarm/overview/) e outras ferramentas por não estarem alinhados com o objetivo desse livro: introdução para desenvolvedores.
@@ -33,6 +33,8 @@ Execute o comando abaixo:
 wget -qO- https://get.docker.com/ | sh
 ```
 Aconselhamos que leia o script que está sendo executado no seu sistema operacional. Acesse [esse link](https://get.docker.com/) e analise o código assim que tiver tempo para fazê-lo.
+
+> **ATENÇÃO**: A utilização do script de conveniência não é recomendado para ambientes de produção. Este script faz a verificação do seu sistema operacional bem como as dependências, instalando os pacotes em sua versão padrão. Para ambientes de produção, siga as instruções da [Documentação Oficial](https://docs.docker.com/get-docker/)
 
 Esse procedimento demora um pouco. Após terminar o teste, execute o comando abaixo:
 
@@ -126,7 +128,7 @@ O **Docker Toolbox** funciona apenas em [versões 64bit](https://support.microso
 
 ![](images/windows1.png)
 
-Para verificar o suporte a virtualização do Windows 7, utilize esse [link](http://www.microsoft.com/en-us/download/details.aspx?id=592) para maiores informações.
+Para verificar o suporte a virtualização do Windows 7, utilize esse [link](https://www.microsoft.com/en-us/download/details.aspx?id=592) para maiores informações.
 
 ### Instalando o Docker Toolbox
 

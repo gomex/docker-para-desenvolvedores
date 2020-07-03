@@ -1,15 +1,15 @@
 # Criando sua própria imagem no Docker
 
 
-Antes de explicarmos como criar sua imagem, vale a pena tocarmos em uma questão que normalmente confunde iniciantes do docker: “Imagem ou container?”
+Antes de explicarmos como criar sua imagem, vale a pena tocarmos em uma questão que normalmente confunde iniciantes do docker: “Imagem ou contêiner?”
 
-### Qual a diferença entre Imagem e Container?
+### Qual a diferença entre Imagem e Contêiner?
 
-Traçando um paralelo com o conceito de [orientação a objeto](https://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos), a **imagem** é a classe e o **container** o objeto. A imagem é a abstração da infraestrutura em estado somente leitura, de onde será instanciado o container.
+Traçando um paralelo com o conceito de [orientação a objeto](https://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos), a **imagem** é a classe e o **contêiner** o objeto. A imagem é a abstração da infraestrutura em estado somente leitura, de onde será instanciado o contêiner.
 
-Todo container é iniciado a partir de uma imagem, dessa forma podemos concluir que nunca teremos uma imagem em execução.
+Todo contêiner é iniciado a partir de uma imagem, dessa forma podemos concluir que nunca teremos uma imagem em execução.
 
-Um container só pode ser iniciado a partir de uma única imagem. Caso deseje um comportamento diferente, será necessário customizar a imagem.
+Um contêiner só pode ser iniciado a partir de uma única imagem. Caso deseje um comportamento diferente, será necessário customizar a imagem.
 
 ### Anatomia da imagem
 
@@ -45,15 +45,15 @@ Há duas formas de criar imagens customizadas: com **commit** e com **Dockerfile
 
 #### Criando imagens com commit
 
-É possível criar imagens executando o comando [commit](https://docs.docker.com/engine/reference/commandline/commit/), relacionado a um container. Esse comando usa o status atual do container escolhido e cria a imagem com base nele.
+É possível criar imagens executando o comando [commit](https://docs.docker.com/engine/reference/commandline/commit/), relacionado a um contêiner. Esse comando usa o status atual do contêiner escolhido e cria a imagem com base nele.
 
-Vamos ao exemplo. Primeiro criamos um container qualquer:
+Vamos ao exemplo. Primeiro criamos um contêiner qualquer:
 
 ```
 docker container run -it --name containercriado ubuntu:16.04 bash
 ```
 
-Agora que estamos no bash do container, instalamos o nginx:
+Agora que estamos no bash do contêiner, instalamos o nginx:
 
 ```
 apt-get update
@@ -61,19 +61,19 @@ apt-get install nginx -y
 exit
 ```
 
-Paramos o container com o comando abaixo:
+Paramos o contêiner com o comando abaixo:
 
 ```
 docker container stop containercriado
 ```
 
-Agora, efetuamos o **commit** desse **container** em uma **imagem**:
+Agora, efetuamos o **commit** desse **contêiner** em uma **imagem**:
 
 ```
 docker container commit containercriado meuubuntu:nginx
 ```
 
-No exemplo do comando acima, **containercriado** é o nome do container criado e modificado nos passos anteriores; o nome **meuubuntu:nginx** é a imagem resultante do **commit**; o estado do **containercriado** é armazenado em uma imagem chamada **meuubuntu:nginx** que, nesse caso, a única modificação que temos da imagem oficial do ubuntu na versão 16.04 é o pacote **nginx** instalado.
+No exemplo do comando acima, **containercriado** é o nome do contêiner criado e modificado nos passos anteriores; o nome **meuubuntu:nginx** é a imagem resultante do **commit**; o estado do **containercriado** é armazenado em uma imagem chamada **meuubuntu:nginx** que, nesse caso, a única modificação que temos da imagem oficial do ubuntu na versão 16.04 é o pacote **nginx** instalado.
 
 Para visualizar a lista de imagens e encontrar a que acabou de criar, execute novamente o comando abaixo:
 
@@ -81,7 +81,7 @@ Para visualizar a lista de imagens e encontrar a que acabou de criar, execute no
 docker image list
 ```
 
-Para testar sua nova imagem, vamos criar um container a partir dela e verificar se o nginx está instalado:
+Para testar sua nova imagem, vamos criar um contêiner a partir dela e verificar se o nginx está instalado:
 
 ```
 docker container run -it --rm meuubuntu:nginx dpkg -l nginx
@@ -128,7 +128,7 @@ No arquivo acima, utilizamos quatro [instruções](https://docs.docker.com/engin
 
 **COPY** é usado para copiar arquivos da estação onde está executando a construção para dentro da imagem. Usamos um arquivo de teste apenas para exemplificar essa possibilidade, mas essa instrução é muito utilizada para enviar arquivos de configuração de ambiente e códigos para serem executados em serviços de aplicação.
 
-**CMD** para informar qual comando será executado por padrão, caso nenhum seja informado na inicialização de um container a partir dessa imagem. No exemplo, colocamos o comando bash, se essa imagem for usada para iniciar um container e não informamos o comando, ele executará o bash.
+**CMD** para informar qual comando será executado por padrão, caso nenhum seja informado na inicialização de um contêiner a partir dessa imagem. No exemplo, colocamos o comando bash, se essa imagem for usada para iniciar um contêiner e não informamos o comando, ele executará o bash.
 
 Após construir seu Dockerfile basta executar o [comando](https://docs.docker.com/engine/reference/commandline/build/) abaixo:
 

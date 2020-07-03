@@ -6,11 +6,11 @@ Esse artigo tem como objetivo explicar de forma detalhada, e com exemplos, o uso
 
 Esse texto é para pessoas que já sabem sobre Docker, mas ainda não sabem como o Docker pode ser utilizado a partir de uma estação “não linux”.
 
-Como já dissemos, o Docker utiliza recursos específicos do sistema operacional hospedeiro. Hoje temos suporte para os sistemas operacionais Windows e GNU/Linux. Significa que não é possível iniciar containers Docker em estação MacOS, por exemplo.
+Como já dissemos, o Docker utiliza recursos específicos do sistema operacional hospedeiro. Hoje temos suporte para os sistemas operacionais Windows e GNU/Linux. Significa que não é possível iniciar contêineres Docker em estação MacOS, por exemplo.
 
 Mas não se preocupe, caso você não utilize GNU/Linux, ou Windows, como sistema operacional, ainda é possível fazer uso dessa tecnologia, sem, necessariamente, executá-la em seu computador.
 
-Vale salientar que containers e imagens Docker criados no Windows, não funcionarão em um GNU/Linux, por conta da dependência do sistema operacional mencionado anteriormente.
+Vale salientar que contêineres e imagens Docker criados no Windows, não funcionarão em um GNU/Linux, por conta da dependência do sistema operacional mencionado anteriormente.
 
 É possível utilizar o Docker no MacOS e Windows a partir de duas maneiras:
 
@@ -88,33 +88,33 @@ eval $(docker-machine env default)
 
 Agora os aplicativos de controle (Docker e Docker-Compose) estão aptos a utilizar o Docker Host a partir da conexão feita no serviço do IP 192.168.99.100 - máquina criada com o comando “docker-machine create” mencionados anteriormente.
 
-Para testar, listamos os containers em execução nesse Docker Host com o comando:
+Para testar, listamos os contêineres em execução nesse Docker Host com o comando:
 
 ```
 docker ps
 ```
-Executado na linha de comando do MacOS ou Windows, esse cliente do Docker se conecta à máquina virtual que, aqui chamamos de “Linux VM”, e solicita a lista de containers em execução no Docker Host remoto.
+Executado na linha de comando do MacOS ou Windows, esse cliente do Docker se conecta à máquina virtual que, aqui chamamos de “Linux VM”, e solicita a lista de contêineres em execução no Docker Host remoto.
 
-Iniciamos um container com o comando abaixo:
+Iniciamos um contêiner com o comando abaixo:
 
 ```
 docker container run -itd alpine sh
 ```
-Agora, verificamos novamente, a lista de containers em execução:
+Agora, verificamos novamente, a lista de contêineres em execução:
 
 ```
 docker ps
 ```
-Podemos ver que o container criado a partir da imagem “alpine” está em execução. Vale salientar que esse processo é executado no Docker Host, na máquina criada dentro do virtualbox que, nesse exemplo, tem o ip 192.168.99.100.
+Podemos ver que o contêiner criado a partir da imagem “alpine” está em execução. Vale salientar que esse processo é executado no Docker Host, na máquina criada dentro do virtualbox que, nesse exemplo, tem o ip 192.168.99.100.
 
 Para verificar o endereço IP da máquina, basta executar o comando abaixo:
 
 ```
 docker-machine ip
 ```
-Caso o container exponha alguma porta para o Docker Host, seja via parâmetro “-p” do comando “docker container run -p porta_host:porta_container” ou via parâmetro “ports” do docker-compose.yml, vale lembrar que o IP para acessar o serviço exposto é o endereço IP do Docker Host que, no exemplo, é “192.168.99.100”.
+Caso o contêiner exponha alguma porta para o Docker Host, seja via parâmetro “-p” do comando “docker container run -p porta_host:porta_container” ou via parâmetro “ports” do docker-compose.yml, vale lembrar que o IP para acessar o serviço exposto é o endereço IP do Docker Host que, no exemplo, é “192.168.99.100”.
 
-Nesse momento, você deve estar se perguntando: como é possível mapear uma pasta da estação “não-linux” para dentro de um container? Aqui entra um novo artíficio do Docker para contornar esse problema.
+Nesse momento, você deve estar se perguntando: como é possível mapear uma pasta da estação “não-linux” para dentro de um contêiner? Aqui entra um novo artíficio do Docker para contornar esse problema.
 
 Toda máquina criada com o driver “virtualbox”, automaticamente, cria um mapeamento do tipo  “pastas compartilhadas do virtualbox” da pasta de usuários para a raiz do Docker Host.
 
@@ -132,26 +132,26 @@ mount | grep vboxsf
 
 O [vboxsf](https://help.ubuntu.com/community/VirtualBox/SharedFolders) é um sistema de arquivo usado pelo virtualbox para montar volumes compartilhados da estação usada para instalar o virtualbox. Ou seja, utilizando o recurso de pasta compartilhada, é possível montar a pasta /Users do MacOS na pasta /Users da máquina virtual do Docker Host.
 
-Todo conteúdo existente na pasta /Users/SeuUsuario do MacOS, será acessível na pasta /Users/SeuUsuario da máquina GNU/Linux que atua como Docker Host no exemplo apresentado. Caso efetue a montagem da pasta /Users/SeuUsuario/MeuCodigo para dentro do container, o dado a ser montado é o mesmo da estação e nada precisa ser feito para replicar esse código para dentro do Docker Host.
+Todo conteúdo existente na pasta /Users/SeuUsuario do MacOS, será acessível na pasta /Users/SeuUsuario da máquina GNU/Linux que atua como Docker Host no exemplo apresentado. Caso efetue a montagem da pasta /Users/SeuUsuario/MeuCodigo para dentro do contêiner, o dado a ser montado é o mesmo da estação e nada precisa ser feito para replicar esse código para dentro do Docker Host.
 
 Vamos testar. Crie um arquivo dentro da pasta de usuário:
 
 ```
 touch teste
 ```
-Iniciamos um container e mapeamos a pasta atual dentro dele:
+Iniciamos um contêiner e mapeamos a pasta atual dentro dele:
 
 ```
 docker container run -itd -v "$PWD:/tmp" --name teste alpine sh
 ```
-No comando acima, iniciamos um container que será nomeado como “teste” e terá mapeado a pasta atual (a variável PWD indica o endereço atual no MacOS) na pasta /tmp, dentro do container.
+No comando acima, iniciamos um contêiner que será nomeado como “teste” e terá mapeado a pasta atual (a variável PWD indica o endereço atual no MacOS) na pasta /tmp, dentro do contêiner.
 
-Verificamos se o arquivo que acabamos de criar está dentro do container:
+Verificamos se o arquivo que acabamos de criar está dentro do contêiner:
 
 ```
 docker container exec teste ls /tmp/teste
 ```
-A linha acima executou o comando “ls /tmp/teste” dentro do container nomeado “teste”, criado no passo anterior.
+A linha acima executou o comando “ls /tmp/teste” dentro do contêiner nomeado “teste”, criado no passo anterior.
 
 Agora acesse o Docker Host com o comando abaixo, e verifique se o arquivo teste se encontra na pasta de usuário:
 

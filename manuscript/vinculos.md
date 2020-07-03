@@ -1,6 +1,6 @@
 # Vínculo de portas
 
-De acordo com a lista do modelo [12factor](http://12factor.net/pt_br), a sétima boa prática é **“Vínculo de portas”**.
+De acordo com a lista do modelo [12factor](https://12factor.net/pt_br/), a sétima boa prática é **“Vínculo de portas”**.
 
 É comum encontrar aplicações executadas dentro de contêineres de servidores web, tal como Tomcat, ou Jboss, por exemplo. Normalmente, essas aplicações são implantadas dentro dos serviços para que possam ser acessadas pelos usuários externamente.
 

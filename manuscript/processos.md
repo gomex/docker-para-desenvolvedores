@@ -1,6 +1,6 @@
 # Processos
 
-Seguindo a lista do modelo [12factor](http://12factor.net/pt_br), temos **“Processos”** como sexta boa prática.
+Seguindo a lista do modelo [12factor](https://12factor.net/pt_br/), temos **“Processos”** como sexta boa prática.
 
 Com o advento da automatização e devida inteligência na manutenção das aplicações, hoje, é esperado que a aplicação possa atender a picos de demandas com inicialização automática de novos processos, sem afetar seu comportamento.
 

@@ -37,7 +37,7 @@ services:
 
 Podemos notar que o serviço "redis" é utilizado a partir da imagem oficial "redis", sem modificação. E o serviço web é gerado a partir da construção de uma imagem Docker.
 
-Para a contrução da imagem Docker do serviço web, criamos o seguinte Dockerfile, usando como base a imagem oficial do python 2.7:
+Para a construção da imagem Docker do serviço web, criamos o seguinte Dockerfile, usando como base a imagem oficial do python 2.7:
 
 ```
 FROM python:2.7

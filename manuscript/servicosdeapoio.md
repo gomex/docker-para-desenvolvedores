@@ -1,6 +1,6 @@
 # Serviços de Apoio
 
-Seguindo a lista do modelo [12factor](http://12factor.net/pt_br/), temos **“Serviços de Apoio”** como quarta boa prática.
+Seguindo a lista do modelo [12factor](https://12factor.net/pt_br/), temos **“Serviços de Apoio”** como quarta boa prática.
 
 Para contextualizar, "serviços de apoio" é qualquer aplicação que seu código consome para operar corretamente (Ex.: banco de dados, serviço de mensagens e afins).
 

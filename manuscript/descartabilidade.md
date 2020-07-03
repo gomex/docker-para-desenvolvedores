@@ -1,6 +1,6 @@
 # Descartabilidade
 
-Na nona posição da lista do modelo [12factor](http://12factor.net/pt_br), a **“Descartabilidade”**.
+Na nona posição da lista do modelo [12factor](https://12factor.net/pt_br/), a **“Descartabilidade”**.
 
 Quando falamos de aplicações web, espera-se que mais de um processo atenda a todo tráfego requisitado para o serviço. Porém, tão importante quanto a habilidade de iniciar novos processos, a capacidade de um processo defeituoso terminar na mesma velocidade que iniciou, pois um processo que demora para finalizar pode comprometer toda solução, uma vez que ela pode ainda estar atendemos requisições de forma defeituosa.
 
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     server.start()
 ```
 
-No código acima, adicionamos tratamento para quando receber um sinal de SIGTERM, finalizar rapidamente o processo. Sem o tratamento, o código demora mais para ser desligado. Dessa forma, concluímos que a solução é descartável o suficiente. Podemos desligar e reiniciar os containers em outro Docker Host e a mudança não causará impacto na integridade dos dados.
+No código acima, adicionamos tratamento para quando receber um sinal de SIGTERM, finalizar rapidamente o processo. Sem o tratamento, o código demora mais para ser desligado. Dessa forma, concluímos que a solução é descartável o suficiente. Podemos desligar e reiniciar os contêineres em outro Docker Host e a mudança não causará impacto na integridade dos dados.
 
 Para fins de entendimento sobre o que trabalhamos aqui, cabe esclarecimento, de acordo com o Wikipedia, sinal é: “(...) notificação assíncrona enviada a processos com o objetivo de notificar a ocorrência de um evento.” E, o SIGTERM: “(...) nome de um sinal conhecido por um processo informático em sistemas operativos POSIX. Este é o sinal padrão enviado pelos comandos kill e killall. Ele causa o término do processo, como em SIGKILL, porém pode ser interpretado ou ignorado pelo processo. Com isso, SIGTERM realiza um encerramento mais amigável, permitindo a liberação de memória e o fechamento dos arquivos.”
 

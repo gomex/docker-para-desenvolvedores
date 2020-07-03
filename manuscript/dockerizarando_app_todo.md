@@ -1,10 +1,10 @@
-# Transformando sua aplicação em container
+# Transformando sua aplicação em contêiner
 
 Evoluímos continuamente para entregar aplicações cada vez melhores, em menor tempo, replicáveis e escaláveis. Entretanto, os esforços e aprendizados para atingir esse nível de maturidade muitas vezes não são simples de serem alcançados.
 
 Atualmente, notamos o surgimento de várias opções de plataformas para facilitar a implantação, configuração e escalabilidade das aplicações que desenvolvemos. Porém, para melhorar nossa maturidade, não podemos depender apenas da plataforma, precisamos construir nossa aplicação seguindo boas práticas.
 
-Visando sugerir uma série de boas práticas comuns a aplicações web modernas, alguns desenvolvedores do [Heroku](https://www.heroku.com/) escreveram o [12Factor app](http://12factor.net/pt_br/), baseado na larga experiência em desenvolvimento desse tipo de aplicação.
+Visando sugerir uma série de boas práticas comuns a aplicações web modernas, alguns desenvolvedores do [Heroku](https://www.heroku.com/) escreveram o [12Factor app](https://12factor.net/pt_br/), baseado na larga experiência em desenvolvimento desse tipo de aplicação.
 
 ![](images/12factor.gif)
 

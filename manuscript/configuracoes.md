@@ -1,6 +1,6 @@
 # Configurações
 
-Seguindo a lista do modelo [12factor](http://12factor.net/), **“Configurações”** é terceira boa prática.
+Seguindo a lista do modelo [12factor](https://12factor.net/), **“Configurações”** é terceira boa prática.
 
 Quando estamos criando um software, aplicamos determinado comportamento dentro do código e normalmente ele não é parametrizável. Para que a aplicação se comporte de forma diferente, será necessário mudar parte do código.
 

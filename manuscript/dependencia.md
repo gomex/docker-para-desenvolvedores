@@ -1,6 +1,6 @@
 # Dependência
 
-Seguindo a lista do modelo [12factor](http://12factor.net/), logo após a base de código que tratamos nesse [artigo](http://techfree.com.br/2016/06/dockerizando-aplicacoes-base-de-codigo/), temos a **“Dependência”** como segunda boa prática.
+Seguindo a lista do modelo [12factor](https://12factor.net/), logo após a base de código que tratamos nesse [artigo](https://imasters.com.br/desenvolvimento/dockerizando-aplicacoes-base-de-codigo), temos a **“Dependência”** como segunda boa prática.
 
 ![](images/dependencia.png)
 
@@ -43,7 +43,7 @@ flask==0.11.1
 redis==2.10.5
 ```
 
-É importante salientar a necessidade de especificar as versões de cada dependência, pois, como no modelo de contêiner, as imagens podem ser construídas a qualquer momento. É importante saber qual versão específica a aplicação precisa. Caso contrário, podemos encontrar problemas com compatibilidade se uma das dependências atualizar e não permaneer compatível com a composição completa das outras dependências e a aplicação que a utiliza.
+É importante salientar a necessidade de especificar as versões de cada dependência, pois, como no modelo de contêiner, as imagens podem ser construídas a qualquer momento. É importante saber qual versão específica a aplicação precisa. Caso contrário, podemos encontrar problemas com compatibilidade se uma das dependências atualizar e não permanecer compatível com a composição completa das outras dependências e a aplicação que a utiliza.
 
 Para acessar o código descrito aqui, baixe o [repositório](https://github.com/gomex/exemplo-12factor-docker) e acesse a pasta **“factor2“**.
 

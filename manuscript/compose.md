@@ -1,14 +1,14 @@
-# Gerenciando múltiplos containers docker com Docker Compose
+# Gerenciando múltiplos contêineres docker com Docker Compose
 
-Esse artigo tem como objetivo explicar de forma detalhada, e com exemplos, como funciona o processo de gerenciamento de múltiplos containers Docker, pois a medida que sua confiança em utilizar Docker aumenta, sua necessidade de utilizar um maior número de containers ao mesmo tempo cresce na mesma proporção, e seguir a boa prática de manter apenas um serviço por container comumente resulta em alguma demanda extra.
+Esse artigo tem como objetivo explicar de forma detalhada, e com exemplos, como funciona o processo de gerenciamento de múltiplos contêineres Docker, pois a medida que sua confiança em utilizar Docker aumenta, sua necessidade de utilizar um maior número de contêineres ao mesmo tempo cresce na mesma proporção, e seguir a boa prática de manter apenas um serviço por contêiner comumente resulta em alguma demanda extra.
 
 ![](images/compose.png)
 
-Geralmente com o aumento do número de containers em execução, fica evidente a necessidade de um melhor gerenciamento da sua comunicação, pois é ideal que os serviços consigam trocar dados entre os containers quando necessário, ou seja, você precisa lidar com a **rede** desse novo ambiente.
+Geralmente com o aumento do número de contêineres em execução, fica evidente a necessidade de um melhor gerenciamento da sua comunicação, pois é ideal que os serviços consigam trocar dados entre os contêineres quando necessário, ou seja, você precisa lidar com a **rede** desse novo ambiente.
 
-Imagine o trabalho que seria executar algumas dezenas de containers manualmente na linha de comando, um por um e todos seus parâmetros necessários, suas configurações de rede entre containers, volumes e afins. Pode parar de imaginar, pois isso não será mais necessário. Para atender essa demanda de gerenciamento de múltiplos containers a solução é o [Docker Compose](https://docs.docker.com/compose/overview/).
+Imagine o trabalho que seria executar algumas dezenas de contêineres manualmente na linha de comando, um por um e todos seus parâmetros necessários, suas configurações de rede entre contêineres, volumes e afins. Pode parar de imaginar, pois isso não será mais necessário. Para atender essa demanda de gerenciamento de múltiplos contêineres a solução é o [Docker Compose](https://docs.docker.com/compose/overview/).
 
-**Docker compose** é uma ferramenta para definição e execução de múltiplos containers Docker. Com ela é possível configurar todos os parâmetros necessários para executar cada container a partir de um **arquivo de definição**. Dentro desse arquivo, definimos cada container como **serviço**, ou seja, sempre que esse texto citar **serviço** de agora em diante, imagine que é a definição que será usada para iniciar um **container**, tal como portas expostas, variáveis de ambiente e afins.
+**Docker compose** é uma ferramenta para definição e execução de múltiplos contêineres Docker. Com ela é possível configurar todos os parâmetros necessários para executar cada contêiner a partir de um **arquivo de definição**. Dentro desse arquivo, definimos cada contêiner como **serviço**, ou seja, sempre que esse texto citar **serviço** de agora em diante, imagine que é a definição que será usada para iniciar um **contêiner**, tal como portas expostas, variáveis de ambiente e afins.
 
 Com o Docker Compose podemos também especificar quais **volumes** e **rede** serão criados para serem utilizados nos parâmetros dos **serviços**, ou seja, isso quer dizer que não preciso criá-los manualmente para que os **serviços** utilizem recursos adicionais de **rede** e **volume**.
 
@@ -84,7 +84,7 @@ No próximo nível de indentação (feito novamente com mais dois espaços) temo
       args:
         versao: 1
 ```
-Voltando dois níveis de indentação (quatro espaços a menos em relação a linha anterior) temos a definição **ports**, que seria o equivalente ao parâmetro [“-p”](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port-p-expose) do comando docker container run. Ele define qual porta do container será exposta no **Docker host**. Que no nosso caso será a porta *5000 do container, com a 5000 do **Docker host**.
+Voltando dois níveis de indentação (quatro espaços a menos em relação a linha anterior) temos a definição **ports**, que seria o equivalente ao parâmetro [“-p”](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port-p-expose) do comando docker container run. Ele define qual porta do contêiner será exposta no **Docker host**. Que no nosso caso será a porta *5000 do contêiner, com a 5000 do **Docker host**.
 
 ```
   web:
@@ -100,7 +100,7 @@ Voltando um nível de indentação (dois espaços a menos em relação a linha a
     image: redis
 ```
 
-No próximo nível de indentação (feito novamente com mais dois espaços) temos a primeira definição do serviço **redis**, que nesse caso é o **image** que é responsável por informar qual imagem será usada para iniciar esse container. Essa imagem será obtida do repositório configurado no **Docker host**, que por padrão é o [hub.docker.com](https://hub.docker.com/).
+No próximo nível de indentação (feito novamente com mais dois espaços) temos a primeira definição do serviço **redis**, que nesse caso é o **image** que é responsável por informar qual imagem será usada para iniciar esse contêiner. Essa imagem será obtida do repositório configurado no **Docker host**, que por padrão é o [hub.docker.com](https://hub.docker.com/).
 
 ### Executando o docker compose
 

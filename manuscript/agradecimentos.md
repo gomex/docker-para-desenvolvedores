@@ -13,7 +13,7 @@ Obrigado a Paulo Caroli que tanto me incentivou a escrever o livro e indicou a p
 
 Obrigada a fantástica [Emma Pinheiro](https://twitter.com/n3k00n3), pela belíssima capa. 
 
-Quero agradecer muito as pessoas incríveis do [Raul Hacker Club](http://raulhc.cc/) que tanto me incentivaram em todo esse tempo.
+Quero agradecer muito as pessoas incríveis do [Raul Hacker Club](https://raulhc.cc/) que tanto me incentivaram em todo esse tempo.
 
 Quero agradecer a mãe do meu filho, Eriane Soares, hoje minha grande amiga que tanto me incentivou a escrever o livro enquanto morávamos juntos!
 

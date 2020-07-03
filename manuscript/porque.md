@@ -4,7 +4,7 @@ Docker tem sido um assunto bem comentado ultimamente, muitos artigos foram escri
 
 ![](images/docker_porque.jpg)
 
-É normal que ainda duvidem do potencial do Docker, alguns até acham que se trata de um [hype](http://techfree.com.br/2015/06/sera-que-esse-modelo-de-containers-e-um-hype/). Mas nesse capítulo pretendemos demonstrar alguns bons motivos para se utilizar Docker.
+É normal que ainda duvidem do potencial do Docker, alguns até acham que se trata de um [hype](https://techfree.com.br/2015/06/sera-que-esse-modelo-de-containers-e-um-hype/). Mas nesse capítulo pretendemos demonstrar alguns bons motivos para se utilizar Docker.
 
 Vale frisar que o Docker não é uma “bala de prata” - ele não se propõe a resolver todos problemas, muito menos ser a solução única para as mais variadas situações.
 
@@ -12,9 +12,9 @@ Abaixo alguns bons motivos para se utilizar Docker:
 
 ### 1 – Ambientes semelhantes
 
-Uma vez que sua aplicação seja transformada em uma imagem Docker, ela pode ser instanciada como container em qualquer ambiente que desejar. Isso significa que poderá utilizar sua aplicação no notebook do desenvolvedor da mesma forma que seria executada no servidor de produção.
+Uma vez que sua aplicação seja transformada em uma imagem Docker, ela pode ser instanciada como contêiner em qualquer ambiente que desejar. Isso significa que poderá utilizar sua aplicação no notebook do desenvolvedor da mesma forma que seria executada no servidor de produção.
 
-A imagem Docker aceita parâmetros durante o início do container, isso indica que a mesma imagem pode se comportar de formas diferentes entre distintos ambientes. Esse container pode conectar-se a seu banco de dados local para testes, usando as credenciais e base de dados de teste. Mas quando o container, criado a partir da mesma imagem, receber parâmetros do ambiente de produção, acessará a base de dados em uma infraestrutura mais robusta, com suas respectivas credenciais e base de dados de produção, por exemplo.
+A imagem Docker aceita parâmetros durante o início do contêiner, isso indica que a mesma imagem pode se comportar de formas diferentes entre distintos ambientes. Esse contêiner pode conectar-se a seu banco de dados local para testes, usando as credenciais e base de dados de teste. Mas quando o contêiner, criado a partir da mesma imagem, receber parâmetros do ambiente de produção, acessará a base de dados em uma infraestrutura mais robusta, com suas respectivas credenciais e base de dados de produção, por exemplo.
 
 As imagens Docker podem ser consideradas como implantações atômicas - o que proporciona maior previsibilidade comparado a outras ferramentas como Puppet, Chef, Ansible, etc - impactando positivamente na análise de erros, assim como na confiabilidade do processo de [entrega contínua](https://www.thoughtworks.com/continuous-delivery), que se baseia fortemente na criação de um único artefato que migra entre ambientes. No caso do Docker, o artefato seria a própria imagem com todas as dependências requeridas para executar seu código, seja ele compilado ou dinâmico.
 
@@ -22,7 +22,7 @@ As imagens Docker podem ser consideradas como implantações atômicas - o que p
 
 Utilizando as imagens Docker é possível empacotar toda sua aplicação e dependências, facilitando a distribuição, pois não será mais necessário enviar uma extensa documentação explicando como configurar a infraestrutura necessária para permitir a execução, basta disponibilizar a imagem em repositório e liberar o acesso para o usuário e, ele mesmo pode baixar o pacote, que será executado sem problemas.
 
-A atualização também é positivamente afetada, pois a [estrutura de camadas](http://techfree.com.br/2015/12/entendendo-armazenamentos-de-dados-no-docker/) do Docker viabiliza que, em caso de mudança, apenas a parte modificada seja transferida e assim o ambiente pode ser alterado de forma mais rápida e simples. O usuário precisa executar apenas um comando para atualizar a imagem da aplicação, que será refletida no container em execução apenas no momento desejado. As imagens Docker podem utilizar tags e, assim, viabilizar o armazenamento de múltiplas versões da mesma aplicação. Isso significa que em caso de problema na atualização, o plano de retorno será basicamente utilizar a imagem com a tag anterior.
+A atualização também é positivamente afetada, pois a [estrutura de camadas](https://imasters.com.br/devsecops/entendendo-o-armazenamento-de-dados-docker) do Docker viabiliza que, em caso de mudança, apenas a parte modificada seja transferida e assim o ambiente pode ser alterado de forma mais rápida e simples. O usuário precisa executar apenas um comando para atualizar a imagem da aplicação, que será refletida no container em execução apenas no momento desejado. As imagens Docker podem utilizar tags e, assim, viabilizar o armazenamento de múltiplas versões da mesma aplicação. Isso significa que em caso de problema na atualização, o plano de retorno será basicamente utilizar a imagem com a tag anterior.
 
 ### 3 – Padronização e replicação
 
@@ -40,7 +40,7 @@ A infraestrutura requerida estará presente no código do desenvolvedor e a áre
 
 ### 5 – Comunidade
 
-Assim como é possível acessar o [github](http://github.com/) ou [gitlab](https://about.gitlab.com/) à procura de exemplos de código, usando o [repositório de imagens do Docker](http://hub.docker.com/) é possível conseguir bons modelos de infraestrutura de aplicações ou serviços prontos para integrações complexas.
+Assim como é possível acessar o [github](https://github.com/) ou [gitlab](https://about.gitlab.com/) à procura de exemplos de código, usando o [repositório de imagens do Docker](https://hub.docker.com/) é possível conseguir bons modelos de infraestrutura de aplicações ou serviços prontos para integrações complexas.
 
 Um exemplo é o [nginx](https://hub.docker.com/_/nginx/) como proxy reverso e [mysql](https://hub.docker.com/_/mysql/) como banco de dados. Caso a aplicação necessite desses dois recursos, você não precisa perder tempo instalando e configurando totalmente esses serviços. Basta utilizar as imagens do repositório, configurando parâmetros mínimos para adequação com o ambiente. Normalmente as imagens oficiais seguem as boas práticas de uso dos serviços oferecidos.
 
@@ -50,13 +50,13 @@ Utilizar essas imagens não significa ficar “refém” da configuração trazi
 
 Algumas pessoas enviaram dúvidas relacionadas às vantagens que explicitamos nesse texto. Assim, ao invés de respondê-las pontualmente, resolvemos publicar as perguntas e as respectivas respostas aqui.
 
-#### Qual a diferença entre imagem Docker e definições criadas por ferramenta de [automação de infraestrutura](http://www.ibm.com/developerworks/br/library/a-devops2/)?
+#### Qual a diferença entre imagem Docker e definições criadas por ferramenta de [automação de infraestrutura](https://www.ibm.com/developerworks/br/library/a-devops2/)?
 
 Como exemplo de ferramentas de automação de infraestrutura temos o [Puppet](https://puppetlabs.com/), [Ansible](https://www.ansible.com/) e [Chef](https://www.chef.io/chef/). Elas podem garantir ambientes parecidos, uma vez que faz parte do seu papel manter determinada configuração no ativo desejado.
 
 A diferença entre a solução Docker e gerência de configuração pode parecer bem tênue, pois ambas podem suportar a configuração necessária de toda infraestrutura que uma aplicação demanda para ser implantada, mas achamos que uma das distinções mais relevantes está no seguinte fato: a imagem é uma abstração completa e não requer qualquer tratamento para lidar com as mais variadas distribuições GNU/Linux existentes, já que a imagem Docker carrega em si uma cópia completa dos arquivos de uma distribuição enxuta.
 
-Carregar em si a cópia de uma distribuição GNU/Linux não costuma ser problema para o Docker, pois utilizando o modelo de camadas, economiza bastante recurso, reutilizando as camadas de base. Leia [esse artigo](http://techfree.com.br/2015/12/entendendo-armazenamentos-de-dados-no-docker/) para entender mais sobre armazenamento do Docker.
+Carregar em si a cópia de uma distribuição GNU/Linux não costuma ser problema para o Docker, pois utilizando o modelo de camadas, economiza bastante recurso, reutilizando as camadas de base. Leia [esse artigo](https://imasters.com.br/devsecops/entendendo-o-armazenamento-de-dados-docker) para entender mais sobre armazenamento do Docker.
 
 Outra vantagem da imagem em relação a gerência de configuração é que, utilizando a imagem, é possível disponibilizar o pacote completo da aplicação em um repositório e, esse “produto final”, ser utilizado facilmente sem necessidade de configuração completa. Apenas um arquivo de configuração e um comando costumam ser suficientes para iniciar uma aplicação criada como imagem Docker.
 
@@ -74,8 +74,8 @@ A ideia do Docker é que os assuntos relevantes e diretamente ligados a aplicaç
 
 #### Muitas pessoas falam de Docker para [micro serviços](https://www.thoughtworks.com/pt/insights/blog/microservices-nutshell). É possível usar o Docker para aplicações monolíticas?
 
-Sim! Porém, em alguns casos, é necessário pequenas modificações na aplicação, para que ela possa usufruir das facilidades do Docker. Um exemplo comum é o log que, normalmente, a aplicação envia para determinado arquivo, ou seja, no modelo Docker as aplicações que estão nos containers não devem tentar escrever ou gerir arquivos de logs. Ao invés disso, cada processo em execução escreve seu próprio fluxo de evento, sem buffer, para o [stdout](https://pt.wikipedia.org/wiki/Fluxos_padr%C3%A3o), pois o Docker tem drivers específicos para tratar o log enviado dessa forma. Essa parte de melhores práticas de gerenciador de logs será detalhada em capítulos posteriores.
+Sim! Porém, em alguns casos, é necessário pequenas modificações na aplicação, para que ela possa usufruir das facilidades do Docker. Um exemplo comum é o log que, normalmente, a aplicação envia para determinado arquivo, ou seja, no modelo Docker as aplicações que estão nos contêineres não devem tentar escrever ou gerir arquivos de logs. Ao invés disso, cada processo em execução escreve seu próprio fluxo de evento, sem buffer, para o [stdout](https://pt.wikipedia.org/wiki/Fluxos_padr%C3%A3o), pois o Docker tem drivers específicos para tratar o log enviado dessa forma. Essa parte de melhores práticas de gerenciador de logs será detalhada em capítulos posteriores.
 
 Em alguns momentos você perceberá que o uso do Docker para sua aplicação demanda muito esforço. Nesses casos, normalmente, o problema está mais em como a aplicação trabalha do que na configuração do Docker. Esteja atento.
 
-Tem mais dúvidas e/ou bons motivos para utilizar Docker? Comente [aqui](http://techfree.com.br/2016/03/porque-usar-docker/).
+Tem mais dúvidas e/ou bons motivos para utilizar Docker? Comente [aqui](https://techfree.com.br/2016/03/porque-usar-docker/).

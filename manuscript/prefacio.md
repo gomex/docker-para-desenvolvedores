@@ -7,7 +7,7 @@ Como qualquer ferramenta, Docker é um investimento que oferece melhor retorno q
 Existem várias apresentações, artigos e documentações sobre Docker. Porém existia a oportunidade de um livro ligando a teoria com a prática da ferramenta. Em que o leitor pode entender as motivações de Docker e também como organizar sua aplicação para extrair o maior proveito da ferramenta.
 Estou muito alegre que o Rafael escreveu este livro, que acredito ser uma contribuição importante para nossa área.
 O Rafael é extremamente engajado na comunidade de Docker e Devops pelo Brasil, além disso entende o que as pessoas buscam de conhecimento na área.
-Nesse livro você vai poder entender o básico sobre Docker com uma liguagem simples e vários exemplos práticos.
+Nesse livro você vai poder entender o básico sobre Docker com uma linguagem simples e vários exemplos práticos.
 Espero que esse livro seja mais um passo para impulsionar sua jornada. Desejo-lhe sucesso e tudo de melhor.
 
 

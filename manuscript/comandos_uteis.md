@@ -2,7 +2,7 @@
 
 Seguem alguns comandos úteis e simples abaixo:
 
--   Remover todos os containers sem uso  
+-   Remover todos os contêineres sem uso  
 `docker container prune`
 -   Parar todos os containers  
 `docker stop $(docker ps -q)`

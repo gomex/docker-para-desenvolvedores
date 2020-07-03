@@ -6,7 +6,7 @@ Esse capítulo tem como objetivo oferecer algumas dicas curtas e diretas com rel
 
 **Breve**
 
-## Boas práticas para executar containers
+## Boas práticas para executar contêineres
 
 **Breve**
 
@@ -14,7 +14,7 @@ Esse capítulo tem como objetivo oferecer algumas dicas curtas e diretas com rel
 
 **Breve**
 
-## Segurança em containers
+## Segurança em contêineres
 
 **Breve**
 
@@ -26,6 +26,6 @@ Esse capítulo tem como objetivo oferecer algumas dicas curtas e diretas com rel
 
 **Breve**
 
-## Monitoramento de containers
+## Monitoramento de contêineres
 
 **Breve**

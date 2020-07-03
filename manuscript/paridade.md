@@ -1,6 +1,6 @@
 # Paridade entre desenvolvimento/produção
 
-Seguindo a lista do modelo [12factor](http://12factor.net/pt_br), temos **“Paridade entre desenvolvimento/produção”** como décima boa prática.
+Seguindo a lista do modelo [12factor](https://12factor.net/pt_br/), temos **“Paridade entre desenvolvimento/produção”** como décima boa prática.
 
 ![](images/paridade1.png)
 

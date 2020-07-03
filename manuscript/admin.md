@@ -1,6 +1,6 @@
 # Processos de administração
 
-Décima segunda e última boa prática da lista do modelo [12factor](http://12factor.net/pt_br): **“Processos de administração”**.
+Décima segunda e última boa prática da lista do modelo [12factor](https://12factor.net/pt_br/): **“Processos de administração”**.
 
 ![](images/admin1.png)
 

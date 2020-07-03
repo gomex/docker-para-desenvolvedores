@@ -1,6 +1,6 @@
 # Construa, lance, execute
 
-O próximo item da lista do modelo [12factor](http://12factor.net/pt_br/), “Construa, lance, execute” é a quinta boa prática..
+O próximo item da lista do modelo [12factor](https://12factor.net/pt_br/), “Construa, lance, execute” é a quinta boa prática..
 
 No processo de automatização de infraestrutura de implantação de software precisamos cuidado para que o comportamento do processo esteja dentro das expectativas e erros humanos causem baixo impacto no processo completo do desenvolvimento, do lançamento à produção.
 
@@ -41,7 +41,7 @@ docker push ${USER}/app:${TIMESTAMP}
 docker push ${USER}/app:latest
 ```
 
-Além de construir a imagem, a envia para o [repositório](http://hub.docker.com/) de imagem do Docker.
+Além de construir a imagem, a envia para o [repositório](https://hub.docker.com/) de imagem do Docker.
 
 Lembre-se que, o código acima e os demais da boa prática, estão [no repositório](https://github.com/gomex/exemplo-12factor-docker) na pasta **“factor5“**.
 

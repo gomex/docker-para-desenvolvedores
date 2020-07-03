@@ -16,7 +16,7 @@ Antes de explicar como utilizar o docker machine, precisamos reforçar o conheci
 
 ![](images/machine3.png)
 
-Como demonstra a imagem acima, a utilização do Docker divide-se em dois serviços: o que roda em modo daemon, em background, chamado de **Docker Host**, responsável pela viabilização dos containers no kernel Linux; e, o cliente, que chamaremos de **Docker client**, responsável por receber comandos do usuário e traduzir em gerência do **Docker Host**.
+Como demonstra a imagem acima, a utilização do Docker divide-se em dois serviços: o que roda em modo daemon, em background, chamado de **Docker Host**, responsável pela viabilização dos contêineres no kernel Linux; e, o cliente, que chamaremos de **Docker client**, responsável por receber comandos do usuário e traduzir em gerência do **Docker Host**.
 
 Cada **Docker client** é configurado para se conectar a determinado **Docker host** e nesse momento o **Docker machine** entra em ação, pois viabiliza a automatização da escolha de configuração de acesso do Docker client a distintos **Docker host**.
 
@@ -78,7 +78,7 @@ Executando o comando **ls** será possível verificar qual ambiente está ativo:
 docker-machine ls
 ```
 
-Inicie um container de teste pra testar o novo ambiente
+Inicie um contêiner de teste pra testar o novo ambiente
 
 ```
 docker container run hello-world
@@ -108,7 +108,7 @@ Tratamento de problema conhecido: caso esteja utilizando Docker-machine no MacOS
 
 #### Nuvem
 
-Para esse exemplo usamos o driver da nuvem mais utilizada, [AWS](http://aws.amazon.com/). Para tanto, precisamos de uma conta na AWS para que [esse driver](https://docs.docker.com/machine/drivers/aws/) funcione adequadamente.
+Para esse exemplo usamos o driver da nuvem mais utilizada, [AWS](https://aws.amazon.com/). Para tanto, precisamos de uma conta na AWS para que [esse driver](https://docs.docker.com/machine/drivers/aws/) funcione adequadamente.
 
 É necessário que suas credenciais estejam no arquivo ~/.aws/credentials da seguinte forma:
 
@@ -124,7 +124,7 @@ Caso não deseje colocar essas informações em arquivo, você pode especificar 
 export AWS_ACCESS_KEY_ID=AKID1234567890
 export AWS_SECRET_ACCESS_KEY=MY-SECRET-KEY
 ```
-Você pode encontrar mais informações sobre credencial AWS [nesse artigo](http://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs).
+Você pode encontrar mais informações sobre credencial AWS [nesse artigo](https://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs).
 
 Quando criamos um ambiente utilizando o comando **docker-machine create**, o mesmo é traduzido para AWS na criação uma [instância EC2](https://aws.amazon.com/ec2/) e, em seguida é instalado todos os softwares necessários, automaticamente, no novo ambiente.
 
@@ -156,7 +156,7 @@ Verifique se o ambiente chamado teste-aws existe na lista, caso positivo, utiliz
 ```
 eval $(docker-machine env teste-aws)
 ```
-Inicie um container de teste pra verificar o novo ambiente
+Inicie um contêiner de teste pra verificar o novo ambiente
 
 ```
 docker container run hello-world

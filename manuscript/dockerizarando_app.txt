@@ -4,7 +4,7 @@ Estamos evoluindo continuamente para entregar aplicações cada vez melhores, em
 
 Atualmente notamos o surgimento de várias opções de plataformas para facilitar a implantação, configuração e escalabilidade das aplicações que desenvolvemos. Porém, para aumentar nosso grau de maturidade não podemos apenas depender da plataforma, precisamos construir nossa aplicação seguindo boas práticas.
 
-Visando definir uma série de boas práticas comuns a aplicações web modernas, alguns desenvolvedores do [Heroku](https://www.heroku.com/) escreveram o manifesto [12Factor app](http://12factor.net/pt_br/), baseado em uma larga experiência em desenvolvimento de aplicações web.
+Visando definir uma série de boas práticas comuns a aplicações web modernas, alguns desenvolvedores do [Heroku](https://www.heroku.com/) escreveram o manifesto [12Factor app](https://12factor.net/pt_br/), baseado em uma larga experiência em desenvolvimento de aplicações web.
 
 ![](images/12factor.gif)
 
@@ -12,7 +12,7 @@ Visando definir uma série de boas práticas comuns a aplicações web modernas,
 
 Nesse capítulo falaremos sobre criação de aplicações como imagens docker com base no 12factor app, ou seja, a ideia é demonstrar as melhores práticas de como se realizar a criação de uma infraestrutura para suportar, empacotar e disponibilizar a sua aplicação com alto nível de maturidade e agilidade.
 
-O uso das práticas do 12factor encaixa muito bem com Docker, pois muitos dos recursos do Docker são melhores aproveitados caso sua aplicação tenha siga essas práticas. Dessa forma, daremos uma ideia de como aproveitar a plataforma de Docker e as práticas do 12factor para facilitiar a portalibilidade e escalabilidade da sua aplicação web.
+O uso das práticas do 12factor encaixa muito bem com Docker, pois muitos dos recursos do Docker são melhores aproveitados caso sua aplicação tenha siga essas práticas. Dessa forma, daremos uma ideia de como aproveitar a plataforma de Docker e as práticas do 12factor para facilitar a portalibilidade e escalabilidade da sua aplicação web.
 
 Como exemplo, usaremos uma aplicação simples em Pyhton, descrita abaixo:
 

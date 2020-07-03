@@ -1,6 +1,6 @@
 # Logs
 
-A décima primeira boa prática, na lista do modelo [12factor](http://12factor.net/pt_br), é **“Logs”**.
+A décima primeira boa prática, na lista do modelo [12factor](https://12factor.net/pt_br/), é **“Logs”**.
 
 ![](images/logs1.png)
 
@@ -14,7 +14,7 @@ Especificar arquivos, implica informar o diretório correto desse arquivo, que, 
 
 A boa prática indica que as aplicações não devem gerenciar ou rotear arquivos de log, mas devem ser depositados sem qualquer esquema de buffer na saída padrão (STDOUT). Assim, uma infraestrutura externa à aplicação - plataforma - deve gerenciar, coletar e formatar a saída dos logs para futura leitura. Isso é realmente importante quando a aplicação está rodando em várias instâncias.
 
-Com o Docker, tal tarefa se torna fácil, pois o Docker já coleta logs da saída padrão e encaminha para algum dos vários drivers de log. O driver pode ser configurado na inicialização do container de forma a centralizar os logs no serviço remoto de logs, por exemplo syslog.
+Com o Docker, tal tarefa se torna fácil, pois o Docker já coleta logs da saída padrão e encaminha para algum dos vários drivers de log. O driver pode ser configurado na inicialização do contêiner de forma a centralizar os logs no serviço remoto de logs, por exemplo syslog.
 
 O código exemplo no repositório([https://github.com/gomex/exemplo-12factor-docker](https://github.com/gomex/exemplo-12factor-docker)), na pasta factor11, está pronto para testar a boa prática, pois já envia todas as saídas de dados para STDOUT e você pode conferir iniciando o serviço com o comando abaixo:
 
