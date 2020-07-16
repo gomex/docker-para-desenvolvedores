@@ -20,3 +20,9 @@ Seguem alguns comandos úteis e simples abaixo:
 `docker save -o imagem.docker imagem`
 -   Carregar imagem  
 `docker load -i imagem.docker`
+-   Copiar arquivos/diretórios da máquina local para dentro de um contêiner  
+`docker cp /home/app meu_container:/app/`
+
+
+
+
