@@ -90,7 +90,6 @@ Outras fontes são:
 
  * Uma ferramenta de backup (atualmente depreciada): [docker-infra/docker-backup](https://github.com/docker-infra/docker-backup)
 
-
 ### Use docker container exec para "entrar em um contêiner"
 
 Eventualmente, é necessário entrar em um contêiner em execução afim de verificar algum problema, efetuar testes ou simplesmente depurar (*debug*).
