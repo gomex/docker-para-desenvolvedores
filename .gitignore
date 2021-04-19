@@ -17,3 +17,6 @@ _book
 
 # NPM
 npm-debug.log
+
+# Generic
+.DS_Store

@@ -5,29 +5,28 @@
   "main": "index.js",
   "dependencies": {
     "gh-pages": "^0.12.0",
+    "gitbook-cli": "^2.3.2",
     "gitbook-plugin-ace": "^0.3.2",
     "gitbook-plugin-chart": "^0.2.0",
     "gitbook-plugin-code-editor": "^1.2.1",
-    "gitbook-plugin-codesnippet": "^1.2.0",
-    "gitbook-plugin-codepen": "^0.1.2",
     "gitbook-plugin-code-highlighter": "^1.0.7",
+    "gitbook-plugin-codepen": "^0.1.2",
+    "gitbook-plugin-codesnippet": "^1.2.0",
     "gitbook-plugin-disqus": "^0.1.0",
     "gitbook-plugin-ga": "^1.0.1",
     "gitbook-plugin-gist": "^1.0.0",
-    "gitbook-plugin-include-codeblock": "^3.0.2",
     "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-include-codeblock": "^3.0.2",
     "gitbook-plugin-jsfiddle": "^1.0.0",
     "gitbook-plugin-wabtheme": "^0.0.1",
     "gitbook-plugin-zingchart": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "gitbook install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gitbook serve",
     "build": "gitbook build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d _book"
+    "deploy": "npm run build && gh-pages -d _book"
   },
   "repository": {
     "type": "git",
