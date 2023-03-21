@@ -4,7 +4,7 @@
   "description": "Docker para Desenvolvedores",
   "main": "index.js",
   "dependencies": {
-    "gh-pages": "^0.12.0",
+    "gh-pages": "^1.0.0",
     "gitbook-plugin-ace": "^0.3.2",
     "gitbook-plugin-chart": "^0.2.0",
     "gitbook-plugin-code-editor": "^1.2.1",

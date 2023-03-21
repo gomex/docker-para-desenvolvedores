@@ -6,7 +6,7 @@ Docker host é o nome do ativo responsável por gerenciar ambientes Docker, ness
 
 [Docker machine](https://docs.docker.com/machine/) é a ferramenta usada para essa gerência distribuída, permite a instalação e gerência de docker hosts de forma fácil e direta.
 
-Essa ferramenta é muito usada por usuários de sistema operacional “não linux”, como demonstraremos ainda, mas sua função não  limita-se a esse fim, pois também é bastante usada para provisionar e gerenciar infraestrutura Docker na nuvem, tal como AWS, Digital Ocean e Openstack.
+Essa ferramenta é muito usada por usuários de sistema operacional “não linux”, como demonstraremos ainda, mas sua função não  limita-se a esse fim, pois também é bastante usada para provisionar e gerenciar infraestrutura Docker na nuvem, tal como AWS, DigitalOcean e Openstack.
 
 ![](images/machine2.png)
 

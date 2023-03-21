@@ -11,7 +11,7 @@ O objetivo da boa prática é viabilizar a configuração da aplicação sem a n
 Seguem alguns exemplo:
 
  - Configuração de banco de dados que, normalmente, são diferentes entre ambientes
- - Credenciais para acesso a serviços remotos (Ex.: Digital Ocean ou Twitter)
+ - Credenciais para acesso a serviços remotos (Ex.: DigitalOcean ou Twitter)
  - Qual nome de DNS será usado pela aplicação
 
 Como já mencionamos, quando a configuração está estaticamente explícita no código, é necessário modificar manualmente e efetuar novo build dos binários a cada reconfiguração do sistema.
