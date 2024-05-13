@@ -10,11 +10,11 @@ Visando organizar, dividir responsabilidade e tornar o processo mais claro, o 12
 
 - **Construa** - converter código do repositório em pacote executável. Nesse processo se obtém as dependências, compila-se o binário e os ativos do código.
 - **Lance** - pacote produzido na fase **construir** é combinado com a configuração. O resultado é o ambiente completo, configurado e pronto para ser colocado em **execução**.
-- **Execute** (também conhecido como “runtime”) - inicia a **execução** do **lançamento** (aplicação + configuração daquele ambiente), com base nas configurações específicas do ambiente requerido.
+- **Execute** (também conhecido como “runtime”) - inicia a **execução** do **lançamento** (aplicação + configuração daquele ambiente) com base nas configurações específicas do ambiente requerido.
 
-A boa prática indica que a aplicação tenha separações explícitas nas fases de **Construa**, **Lance** e **Execute**. Assim, cada mudança no código da aplicação, é construída apenas uma vez na etapa de **Construa**. Mudanças da configuração não necessitam nova **construção**, sendo necessário, apenas, as etapas de **lançar** e **executar**.
+A boa prática indica que a aplicação tenha separações explícitas nas fases de **Construa**, **Lance** e **Execute**. Assim, cada mudança no código da aplicação é construída apenas uma vez na etapa de **Construa**. Mudanças da configuração não necessitam nova **construção** sendo necessário, apenas, as etapas de **lançar** e **executar**.
 
-De tal forma, é possível criar controles e processos claros em cada etapa. Caso algo ocorra na **construção** do código, uma medida pode ser tomada ou mesmo se cancela o lançamento, para que o código em produção não seja comprometido por conta do possível erro.
+De tal forma é possível criar controles e processos claros em cada etapa. Caso algo ocorra na **construção** do código, uma medida pode ser tomada ou mesmo se cancela o lançamento para que o código em produção não seja comprometido por conta do possível erro.
 
 Com a separação das responsabilidades é possível saber em qual etapa o problema aconteceu e atuar manualmente, caso necessário.
 
@@ -41,17 +41,17 @@ docker push ${USER}/app:${TIMESTAMP}
 docker push ${USER}/app:latest
 ```
 
-Além de construir a imagem, a envia para o [repositório](https://hub.docker.com/) de imagem do Docker.
+Além de construir a imagem a envia para o [repositório](https://hub.docker.com/) de imagem do Docker.
 
-Lembre-se que, o código acima e os demais da boa prática, estão [no repositório](https://github.com/gomex/exemplo-12factor-docker) na pasta **“factor5“**.
+Lembre-se que o código acima e os demais da boa prática estão [no repositório](https://github.com/gomex/exemplo-12factor-docker) na pasta **“factor5“**.
 
-O envio da imagem para o repositório é parte importante da boa prática em questão, pois isola o processo. Caso a imagem não seja enviada para o repositório, permanece apenas no servidor que executou o processo de **construção**, sendo assim, a próxima etapa precisa, necessariamente, ser executada no mesmo servidor, pois tal etapa precisa da imagem disponível.
+O envio da imagem para o repositório é parte importante da boa prática em questão, pois isola o processo. Caso a imagem não seja enviada para o repositório permanece apenas no servidor que executou o processo de **construção**. Sendo assim a próxima etapa precisa, necessariamente, ser executada no mesmo servidor, pois nela precisaremos da imagem disponível.
 
-No modelo proposto, a imagem no repositório central fica disponível para ser baixada no servidor. Caso utilize uma ferramenta de pipeline, é importante - ao invés de utilizar a data para tornar o artefato único - usar variáveis do produto para garantir que a imagem a ser consumida na etapa Executar, seja a mesma construída na etapa Lançar. Exemplo no GoCD: variáveis **GO_PIPELINE_NAME** e **GO_PIPELINE_COUNTER** podem ser usadas em conjunto como garantia.
+No modelo proposto a imagem do repositório central fica disponível para ser baixada no servidor. Caso utilize uma ferramenta de pipeline é importante - ao invés de utilizar a data para tornar o artefato único - usar variáveis do produto para garantir que a imagem a ser consumida na etapa Executar seja a mesma construída na etapa Lançar. Exemplo no GoCD: variáveis **GO_PIPELINE_NAME** e **GO_PIPELINE_COUNTER** podem ser usadas em conjunto como garantia.
 
-Com a geração da imagem podemos garantir que a etapa **Construir** foi atendida perfeitamente, pois, agora temos um artefato construído e pronto para ser reunido à configuração.
+Com a geração da imagem podemos garantir que a etapa **Construir** foi atendida perfeitamente porque agora temos um artefato construído e pronto para ser reunido à configuração.
 
-A etapa de **Lançamento** é o arquivo docker-compose.yml em si, pois o mesmo recebe as configurações devidas para o ambiente no qual se deseja colocar a aplicação. Sendo assim, o arquivo docker-compose.yml muda um pouco e deixa de fazer a **construção** da imagem, já que, agora, será utilizado apenas para **Lançamento** e **Execução** (posteriormente):
+A etapa de **Lançamento** é o arquivo docker-compose.yml em si, pois o mesmo recebe as configurações devidas para o ambiente no qual se deseja hospedar a aplicação. Sendo assim, o arquivo docker-compose.yml muda um pouco e deixa de fazer a **construção** da imagem, já que, agora, será utilizado apenas para **Lançamento** e **Execução** (posteriormente):
 
 ```
 version: "2"
@@ -80,9 +80,9 @@ volumes:
     external: false
 ```
 
-No exemplo **docker-compose.yml** acima, usamos a tag latest para garantir que busque sempre a última imagem **construída** no processo. Mas como já mencionamos, caso utilize alguma ferramenta de entrega contínua (como GoCD, por exemplo) faça uso das variáveis, para garantir a imagem criada na execução específica do pipeline.
+No exemplo **docker-compose.yml**, acima, usamos a tag latest para garantir que busque sempre a última imagem **construída** no processo. Mas como já mencionamos, caso utilize alguma ferramenta de entrega contínua (como GoCD, por exemplo) faça uso das variáveis para garantir a imagem criada na execução específica do pipeline.
 
-Dessa forma, **lançamento** e **execução** utilizarão o mesmo artefato: a imagem Docker, construída na fase de construção.
+Dessa forma, **lançamento** e **execução** utilizarão o mesmo artefato: a imagem Docker construída na fase de construção.
 
 A etapa de **execução**, basicamente, executa o Docker-Compose com o comando abaixo:
 

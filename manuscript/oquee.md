@@ -20,10 +20,10 @@ Outro ponto interessante no Docker é a velocidade para viabilizar o ambiente de
 
 ### Virtualização a nível do sistema operacional
 
-O modelo de isolamento utilizado no Docker é a virtualização a nível do sistema operacional, um método de virtualização onde o kernel do sistema operacional permite que múltiplos processos sejam executados isoladamente no mesmo host. Esses processos isolados em execução são denominados no Docker de contêiner.
+O modelo de isolamento utilizado no Docker é a virtualização a nível do sistema operacional, um método de virtualização em que o kernel do sistema operacional permite que múltiplos processos sejam executados isoladamente no mesmo host. Esses processos isolados em execução são denominados no Docker de container.
 
 ![](images/docker2.png)
 
 Para criar o isolamento necessário do processo, o Docker usa a funcionalidade do kernel, denominada de [namespaces](https://man7.org/linux/man-pages/man7/namespaces.7.html), que cria ambientes isolados entre containers: os processos de uma aplicação em execução não terão acesso aos recursos de outra. A menos que seja expressamente liberado na configuração de cada ambiente.
 
-Para evitar a exaustão dos recursos da máquina por apenas um ambiente isolado, o Docker usa a funcionalidade [cgroups](https://en.wikipedia.org/wiki/Cgroups) do kernel, responsável por criar limites de uso do hardware a disposição. Com isso é possível coexistir no mesmo host diferentes contêineres sem que um afete diretamente o outro por uso exagerado dos recursos compartilhados. 
+Para evitar a exaustão dos recursos da máquina por apenas um ambiente isolado, o Docker usa a funcionalidade [cgroups](https://en.wikipedia.org/wiki/Cgroups) do kernel, responsável por criar limites de uso do hardware a disposição. Com isso, é possível coexistir, no mesmo host, diferentes containers sem que um afete diretamente o outro por uso exagerado dos recursos compartilhados. 

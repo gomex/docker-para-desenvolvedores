@@ -62,7 +62,7 @@ docker container run [--rm [-it]|-d] \
 -v /etc/localtime:/etc/localtime:ro \
 imagem [comando]
 ```
-Atenção: dependendo da distribuição, não há um /etc/localtime, tem de averiguar como ela define o timezone e "replicar" no contêiner.
+**Atenção:** dependendo da distribuição, não há um /etc/localtime, tem de averiguar como ela define o timezone e "replicar" no contêiner.
 
 Mantendo as configurações do aplicativo:
 
