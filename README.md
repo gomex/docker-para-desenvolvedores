@@ -4,6 +4,8 @@ Esse livro apresenta a utilização do Docker focando nas melhores práticas de 
 
 > Autor: **[Rafael Gomes](https://github.com/gomex)**
 
+> [Leanpub](https://leanpub.com/dockerparadesenvolvedores)
+
 ## Sumário
 
 1. [Organização](manuscript/organizacao.md)

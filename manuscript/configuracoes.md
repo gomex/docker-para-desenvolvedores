@@ -4,14 +4,14 @@ Seguindo a lista do modelo [12factor](https://12factor.net/), **“Configuraçõ
 
 Quando estamos criando um software, aplicamos determinado comportamento dentro do código e normalmente ele não é parametrizável. Para que a aplicação se comporte de forma diferente, será necessário mudar parte do código.
 
-A necessidade de modificar o código para trocar o comportamento da aplicação, inviabiliza que, a mesma seja executa na máquina (desenvolvimento) da mesma forma que é usada para atender os usuários (produção). E, com isso, acabamos com a possibilidade de portabilidade. E, sem portabilidade, qual a vantagem de se usar contêineres, certo?
+A necessidade de modificar o código para trocar o comportamento da aplicação, inviabiliza que, a mesma seja executada na máquina (desenvolvimento) da mesma forma que é usada para atender os usuários (produção). E, com isso, acabamos com a possibilidade de portabilidade. E, sem portabilidade, qual a vantagem de se usar contêineres, certo?
 
 O objetivo da boa prática é viabilizar a configuração da aplicação sem a necessidade de modificar o código. Já que, o comportamento da aplicação varia de acordo com o ambiente onde é executada, as configurações devem considerar o ambiente.
 
 Seguem alguns exemplo:
 
  - Configuração de banco de dados que, normalmente, são diferentes entre ambientes
- - Credenciais para acesso a serviços remotos (Ex.: Digital Ocean ou Twitter)
+ - Credenciais para acesso a serviços remotos (Ex.: DigitalOcean ou Twitter)
  - Qual nome de DNS será usado pela aplicação
 
 Como já mencionamos, quando a configuração está estaticamente explícita no código, é necessário modificar manualmente e efetuar novo build dos binários a cada reconfiguração do sistema.

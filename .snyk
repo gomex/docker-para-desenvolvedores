@@ -1,0 +1,31 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-17T18:24:09.536Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-17T18:24:09.536Z'
+  'npm:hoek:20180212':
+    - gitbook-plugin-codesnippet > request > hawk > hoek:
+        patched: '2021-02-03T20:18:35.735Z'
+    - gitbook-plugin-codesnippet > request > hawk > boom > hoek:
+        patched: '2021-02-03T20:18:35.735Z'
+    - gitbook-plugin-codesnippet > request > hawk > sntp > hoek:
+        patched: '2021-02-03T20:18:35.735Z'
+    - gitbook-plugin-codesnippet > request > hawk > cryptiles > boom > hoek:
+        patched: '2021-02-03T20:18:35.735Z'
+  'npm:lodash:20180130':
+    - gitbook-plugin-codepen > cheerio > lodash:
+        patched: '2021-02-03T20:18:35.735Z'
+  'npm:request:20160119':
+    - gitbook-plugin-codesnippet > request:
+        patched: '2021-02-03T20:18:35.735Z'
+  'npm:tough-cookie:20170905':
+    - gitbook-plugin-codesnippet > request > tough-cookie:
+        patched: '2021-02-03T20:18:35.735Z'
+  'npm:tunnel-agent:20170305':
+    - gitbook-plugin-codesnippet > request > tunnel-agent:
+        patched: '2021-02-03T20:18:35.735Z'

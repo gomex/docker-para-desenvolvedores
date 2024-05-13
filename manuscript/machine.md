@@ -6,7 +6,7 @@ Docker host é o nome do ativo responsável por gerenciar ambientes Docker, ness
 
 [Docker machine](https://docs.docker.com/machine/) é a ferramenta usada para essa gerência distribuída, permite a instalação e gerência de docker hosts de forma fácil e direta.
 
-Essa ferramenta é muito usada por usuários de sistema operacional “não linux”, como demonstraremos ainda, mas sua função não  limita-se a esse fim, pois também é bastante usada para provisionar e gerenciar infraestrutura Docker na nuvem, tal como AWS, Digital Ocean e Openstack.
+Essa ferramenta é muito usada por usuários de sistema operacional “não linux”, como demonstraremos ainda, mas sua função não  limita-se a esse fim, pois também é bastante usada para provisionar e gerenciar infraestrutura Docker na nuvem, tal como AWS, DigitalOcean e Openstack.
 
 ![](images/machine2.png)
 
@@ -42,7 +42,9 @@ Para esse exemplo, usaremos o driver mais utilizado, o [virtualbox](https://docs
 
 Antes de criar o ambiente vamos entender como funciona o comando de criação do docker machine:
 
+```
 docker-machine create --driver=<nome do driver>  <nome do ambiente>
+```
 
 Para o driver **virtualbox** temos alguns parâmetros que podem ser utilizados:
 

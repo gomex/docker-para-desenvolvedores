@@ -261,7 +261,7 @@ Sempre que possível, utilize imagens oficiais como base para sua imagem. Você 
 
 Se mais ferramentas e dependências são necessárias, olhe por imagens como [`buildpack-deps`](https://hub.docker.com/_/buildpack-deps/).
 
-Porém, caso `debian` ainda seja muito grande, existem imagens minimalistas como [`alpine`](https://hub.docker.com/r/gliderlabs/alpine/) ou mesmo [`busybox`](https://hub.docker.com/r/gliderlabs/alpine/). Evite `alpine` se DNS é necessário, existem [alguns problemas a serem resolvidos](https://github.com/gliderlabs/docker-alpine/blob/master/docs/caveats.md). Além disso, evite-o para linguagens que usam o GCC, como Ruby, Node, Python, etc, isso é porque `alpine` utiliza libc MUSL que pode produzir binários diferentes.
+Porém, caso `debian` ainda seja muito grande, existem imagens minimalistas como [`alpine`](https://hub.docker.com/r/gliderlabs/alpine/) ou mesmo [`busybox`](https://hub.docker.com/_/busybox). Evite `alpine` se DNS é necessário, existem [alguns problemas a serem resolvidos](https://github.com/gliderlabs/docker-alpine/blob/master/docs/caveats.md). Além disso, evite-o para linguagens que usam o GCC, como Ruby, Node, Python, etc, isso é porque `alpine` utiliza libc MUSL que pode produzir binários diferentes.
 
 Evite imagens gigantes como [`phusion/baseimage`](https://hub.docker.com/r/phusion/baseimage/). Essa imagem é muito grande, foge da filosofia de processo por contêiner e muito do que a compõe não é essencial para contêineres Docker, [veja mais aqui](https://blog.docker.com/2014/06/why-you-dont-need-to-run-sshd-in-docker/) .
 
